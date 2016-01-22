@@ -1,0 +1,297 @@
+WebCore config: library(C:\Users\Spencer\Documents\GitHub\Spoon\te4-web.dll) spawn(C:\Users\Spencer\Documents\GitHub\Spoon\cef3spawn.exe)
+Loading WebCore: loaded!
+[CPU] Detected 4 CPUs
+OpenAL device available: OpenAL Soft (default OpenAL Soft)
+Available video driver: windows
+Available video driver: dummy
+NO SELFEXE: bootstrapping from CWD
+Creating save thread
+===top 2
+Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine.exe
+SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
+LuaVM:	LuaJIT 2.0.2	x86
+Creating particles thread 0
+Creating particles thread 1
+Creating particles thread 2
+[DO RESIZE] Requested: 800x600 (0, 0)
+LuaVM:	LuaJIT 2.0.2	x86
+LuaVM:	LuaJIT 2.0.2	x86
+LuaVM:	LuaJIT 2.0.2	x86
+[DO RESIZE] Got: 800x600 (0, 0)
+OpenGL max texture size: 16384
+OpenGL max texture size: 16384
+Upgrading black texture to size 64
+Running lua loader code...
+Reboot using	te4	LATEST	boot	player	false
+[ENGINE LOADER] available from teae: 	te4-1.3.3
+[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=3.000000 , [3]=3.000000 , [4]="te4" , [5]=17.000000 , ["load_teae"]="/engines/te4-1.3.3.teae" , } , } __byname={["te4-1.3.3"]=true , } 
+[ENGINE LOADER] looked in:
+	C:\Users\Spencer\\T-Engine\4.0
+	bootstrap
+	C:\Users\Spencer\Documents\GitHub\Spoon\\game\thirdparty
+	C:\Users\Spencer\Documents\GitHub\Spoon\\game
+[ENGINE LOADER] sorted:	te4	1	3	3
+[ENGINE LOADER] loading engine:	1	3	3	te4
+[ENGINE LOADER] using archived engine:	/engines/te4-1.3.3.teae
+Available resolutions: 1920x1080x32
+Available resolutions: 1680x1050x32
+Available resolutions: 1600x1024x32
+Available resolutions: 1600x900x32
+Available resolutions: 1366x768x32
+Available resolutions: 1360x768x32
+Available resolutions: 1280x1024x32
+Available resolutions: 1280x960x32
+Available resolutions: 1280x800x32
+Available resolutions: 1280x768x32
+Available resolutions: 1280x720x32
+Available resolutions: 1152x864x32
+Available resolutions: 1024x768x32
+Available resolutions: 800x600x32
+Available resolutions: 720x576x32
+Available resolutions: 720x480x32
+Available resolutions: 640x480x32
+Available resolutions: 640x350x32
+Available resolutions: 1920x1080x16
+Available resolutions: 1680x1050x16
+Available resolutions: 1600x1024x16
+Available resolutions: 1600x900x16
+Available resolutions: 1366x768x16
+Available resolutions: 1360x768x16
+Available resolutions: 1280x1024x16
+Available resolutions: 1280x960x16
+Available resolutions: 1280x800x16
+Available resolutions: 1280x768x16
+Available resolutions: 1280x720x16
+Available resolutions: 1152x864x16
+Available resolutions: 1024x768x16
+Available resolutions: 800x600x16
+Available resolutions: 720x576x16
+Available resolutions: 720x480x16
+Available resolutions: 640x480x16
+Available resolutions: 640x350x16
+[KEYBINDER] Loaded keybinds: move
+[KEYBINDER] Loaded keybinds: hotkeys
+[KEYBINDER] Loaded keybinds: inventory
+[KEYBINDER] Loaded keybinds: actions
+[KEYBINDER] Loaded keybinds: interface
+[KEYBINDER] Loaded keybinds: debug
+Remapping	HOTKEY_7	table: 0x0b023000
+setResolution: switching resolution to	1280x800 Windowed	1280	800	false	false	(forced)
+Setting resolution to 1280x800 (windowed, with borders)
+[DO RESIZE] Requested: 1280x800 (0, 0)
+[DO RESIZE] Got: 1280x800 (0, 0)
+OpenGL max texture size: 16384
+setResolution: performing onResolutionChange...
+
+onResolutionChange: resolution changed to 	1280	800	from	nil	nil
+onResolutionChange: no game yet!
+Creating profile thread
+[ONLINE PROFILE] fun facts	nil
+LuaVM:	LuaJIT 2.0.2	x86
+[PROFILE] mounted 	online	on /current-profile
+TE4Online starting...
+[PROFILE] unmounted 	online	from /current-profile
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[ENGINE] Switching to turn based
+[SAVEFILE PIPE] force waiting
+Creating module	boot-te4-1.3.3.team	:: (as dir)	false	:: (as team)	15	
+Module mismatch engine version boot-1.0.0 using engine te4-1.0.1
+Loaded module definition for boot-1.0.0 using engine te4-1.0.1
+Creating module	example	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for example-1.3.3 using engine te4-1.3.3
+Creating module	example_realtime	:: (as dir)	true	:: (as team)	nil	
+Module mismatch engine version example_realtime-1.1.5 using engine te4-1.1.5
+Loaded module definition for example_realtime-1.1.5 using engine te4-1.1.5
+* Module: boot
+ ** 1.0.0
+* Module: example
+ ** 1.3.3
+* Module: example_realtime
+ ** 1.1.5
+After fs.reset
+[1] = {
+  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.3.3.teae
+}
+[MODULE] booting module version	boot-1.0.0
+[ENGINE] Switching to turn based
+Loading savefile 	/save//
+Loading savefile 	/save/player/
+Make wait background texture 2 : 1280x800 (2048, 1024)
+Upgrading black texture to size 1048576
+Upgrading black texture to size 4194304
+[PROFILE] Got metaserver infos
+[PROFILE] Thread connecting to profiles.te4.org on ports 	2257	2258
+Post-processing hooks.
+[MODULE] All hashes validation: 	nil	no online profile active
+Using cached font	/data/font/Salsa-Regular.ttf	16
+Using cached font	/data/font/Salsa-Regular.ttf	16
+[ENGINE] Switching to realtime, interval 125 ms
+[MODULE LOADER] loading module	Tales of Maj'Eyal Main Menu	[mod.load]	::	nil	nil
+[PROFILE] Thread connected to profiles.te4.org
+[ONLINE PROFILE] reconnecting to channels
+[GAMMA] Not setting gamma correction yet, no fullscreen shader found	1.2
+Using cached font	/data/font/Salsa-Regular.ttf	16
+[ENGINE] Switching to realtime, interval 125 ms
+[GAMMA] Not setting gamma correction yet, no fullscreen shader found	1.2
+Loading savefile 	/save/player/
+Creating WebView with url	http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4
+[MAP] Reseting tiles caches
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+Using cached font	/data/font/DroidSansMono.ttf	22
+[SHADER] Loading from /data/gfx/shaders/main_fbo.lua
+[SHADER] Loaded shader with totalname	main_fbo[]
+New GL Shader program 1
+[WEBCORE] Browser count 1
+New GL Shader 2 of type 35632
+[SHADER] created fragment shader from /data/gfx/shaders/main_fbo.frag
+*p 1: Uniform: 0: 1406 blur
+*p 1: Uniform: 1: 8B52 colorize
+*p 1: Uniform: 2: 1406 hp_warning
+*p 1: Uniform: 3: 1406 motionblur
+*p 1: Uniform: 4: 8B5E noisevol
+*p 1: Uniform: 5: 8B5E tex
+*p 1: Uniform: 6: 8B50 texSize
+*p 1: Uniform: 7: 1406 tick
+[SHADER] Loading from /data/gfx/shaders/full_fbo.lua
+[SHADER] Loaded shader with totalname	full_fbo[]
+New GL Shader program 3
+New GL Shader 4 of type 35632
+[SHADER] created fragment shader from /data/gfx/shaders/full_fbo.frag
+*p 3: Uniform: 0: 1406 gamma
+*p 3: Uniform: 1: 8B5E sceneBuffer
+[GAMMA] Setting gamma correction using fullscreen shader	1.2
+Loading savefile 	/save/player/
+Loading entities file from file	/data/zones/dungeon/npcs.lua
+Loading entities file from file	/data/general/npcs/skeleton.lua
+Loading entities file from file	/data/general/npcs/canine.lua
+Loading entities file from file	/data/general/npcs/troll.lua
+Loading entities file from file	/data/zones/dungeon/grids.lua
+Loading entities file from file	/data/general/grids/basic.lua
+Loading entities file from file	/data/general/grids/forest.lua
+Loading entities file from file	/data/general/grids/water.lua
+Loading entities file from file	/data/general/grids/underground.lua
+Loading entities file from file	/data/zones/dungeon/objects.lua
+Loading entities file from file	/data/zones/dungeon/traps.lua
+Initiated zone	Forest	with base_level	1
+Creating level	dungeon	2
+C Map size 26:16 :: 416
+C Map seens texture: 38 (60x60)
+loaded room generator	random_room	function: 0x0d29c9b0
+room generator	function: 0x0d29c9b0	is making a room
+loaded room generator	simple	function: 0x0fdab5d0
+alloc	simple11x10
+[PROFILE THREAD] batching CSETs
+room allocated at	29	16	with center	34	20
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	small_inner_cross	7	7
+alloc	small_inner_cross
+room allocated at	10	2	with center	13	5
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	cells2	12	11
+alloc	cells2
+room allocated at	30	35	with center	35	40
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	double_y	11	7
+alloc	double_y
+room allocated at	14	14	with center	19	17
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	center_arrows	11	15
+alloc	center_arrows
+room allocated at	11	23	with center	16	30
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	inner_pillar	9	7
+alloc	inner_pillar
+room allocated at	39	1	with center	43	4
+room generator	function: 0x0d29c9b0	is making a room
+alloc	simple9x11
+room allocated at	2	36	with center	6	41
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	pilar	10	5
+alloc	pilar
+room allocated at	1	20	with center	5	22
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	double_helix	12	6
+alloc	double_helix
+room allocated at	14	42	with center	19	44
+room generator	function: 0x0d29c9b0	is making a room
+loaded room	cells5	6	13
+alloc	cells5
+room allocated at	42	18	with center	44	24
+Begin tunnel	10	table: 0x0fd996a8
+Loading tile	terrain/granite_wall1.png
+Loading tile	terrain/marble_floor.png
+Loading tile	terrain/granite_door1.png
+Loading tile	npc/troll_f.png
+Loading tile	npc/troll_c.png
+Loading tile	npc/canine_ww.png
+Loading tile	npc/degenerated_skeleton_warrior.png
+Loading tile	npc/troll_s.png
+Loading tile	npc/canine_w.png
+Loading tile	npc/troll_mt.png
+Loading tile	npc/troll_m.png
+Loading tile	npc/skeleton_warrior.png
+Loading tile	terrain/granite_wall1_4.png
+Loading tile	terrain/granite_wall1_2.png
+Loading tile	terrain/granite_wall1_5.png
+Loading tile	terrain/granite_wall1_3.png
+Loading tile	terrain/granite_wall1_1.png
+Loading tile	terrain/granite_wall2.png
+Loading tile	terrain/granite_wall3.png
+Loading tile	terrain/marble_floor.png
+Loading tile	terrain/granite_wall_pillar_small.png
+Loading tile	terrain/granite_wall_pillar_small_top.png
+Loading tile	terrain/granite_wall_pillar_1.png
+Loading tile	terrain/granite_wall_pillar_7.png
+Loading tile	terrain/granite_wall_pillar_8.png
+Loading tile	terrain/granite_wall2_1.png
+Loading tile	terrain/granite_wall_pillar_3.png
+Loading tile	terrain/granite_wall_pillar_9.png
+Loading tile	terrain/granite_wall_pillar_2.png
+Loading tile	terrain/marble_floor.png
+Loading tile	terrain/granite_door1_vert.png
+Loading tile	terrain/granite_door1_vert_north.png
+Loading tile	terrain/granite_wall2_14.png
+Loading tile	terrain/granite_wall2_6.png
+Loading tile	terrain/granite_wall2_5.png
+Loading tile	terrain/granite_wall2_8.png
+Loading tile	terrain/granite_wall2_12.png
+Loading tile	terrain/granite_wall2_9.png
+Loading tile	terrain/granite_wall2_15.png
+Loading tile	terrain/granite_wall2_7.png
+Loading tile	terrain/granite_wall2_17.png
+Loading tile	terrain/granite_wall2_11.png
+Loading tile	terrain/granite_wall2_4.png
+Loading tile	player/humanoid_dwarf_dwarven_summoner.png
+Using cached font	/data/font/Salsa-Regular.ttf	16
+[KEYBINDER] Loaded keybinds: chat
+[MUSIC] loading	The saga begins.ogg	sound "/data/music/The saga begins.ogg" : <static>
+[MUSIC] playing	The saga begins.ogg	sound "/data/music/The saga begins.ogg" : <static>
+[ENGINE] Setting requested FPS to 30 (33 ms)
+[LOG]	#{italic}##ROYAL_BLUE#Retrieving addons to update/download from te4.org...#{normal}#
+Creating module	boot-te4-1.3.3.team	:: (as dir)	false	:: (as team)	15	
+Creating module	example	:: (as dir)	true	:: (as team)	nil	
+Loaded module definition for example-1.3.3 using engine te4-1.3.3
+Creating module	example_realtime	:: (as dir)	true	:: (as team)	nil	
+Module mismatch engine version example_realtime-1.1.5 using engine te4-1.1.5
+Loaded module definition for example_realtime-1.1.5 using engine te4-1.1.5
+* Module: example
+ ** 1.3.3
+* Module: example_realtime
+ ** 1.1.5
+After fs.reset
+[1] = {
+  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.3.3.teae
+}
+Joining default channels
+[MODULE LOADER] done loading module	Tales of Maj'Eyal Main Menu
+[PROFILE] mounted 	online	on /current-profile
+[PROFILE] unmounted 	online	from /current-profile
+Wait finished, counted 1354, 1793 ticks
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
+Selecting waypoint	12	36	::	stone t

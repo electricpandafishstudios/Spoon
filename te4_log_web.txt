@@ -1,0 +1,12 @@
+[WEBCORE] Created browser for webview
+[WEBCORE] Created webview
+[WEBCORE] Shutdown starting...
+[WEBCORE] Sending kill to all browsers (1)
+[WEBCORE] Sending kill to a browser (crash status 0)
+[WEBCORE] Destroyed webview for browser
+Waiting browsers to close: 1 left
+[WEBCORE] Destroyed client
+[WEBCORE] Destroyed renreder
+Waiting browsers to close: 0 left
+[WEBCORE] all browsers dead, shutting down
+[WEBCORE] all browsers dead, shutdown completed
