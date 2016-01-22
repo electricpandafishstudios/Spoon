@@ -31,29 +31,6 @@ newBirthDescriptor{
 	},
 }
 
-newBirthDescriptor{
-	type = "role",
-	name = "Destroyer",
-	desc =
-	{
-		"Crashhhhh!",
-	},
-	talents = {
-		[ActorTalents.T_KICK]=1,
-	},
-}
-
-newBirthDescriptor{
-	type = "role",
-	name = "Acid-maniac",
-	desc =
-	{
-		"Zshhhhhhhh!",
-	},
-	talents = {
-		[ActorTalents.T_ACID_SPRAY]=1,
-	},
-}
 --Added spoon class
 newBirthDescriptor{
 	type = "role",
@@ -63,6 +40,6 @@ newBirthDescriptor{
 		"I'm a Spoooon!",
 	},
 	talents = {
-		[ActorTalents.T_FIRE_BALL]=1,
+		--[ActorTalents.T_FIRE_BALL]=1,
 	},
 }
