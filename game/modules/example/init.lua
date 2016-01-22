@@ -27,5 +27,7 @@ engine = {1,3,3,"te4"}
 description = [[
 Spoon Game!
 ]]
+no_get_name = true
+allow_userchat = false
 starter = "mod.load"
 show_only_on_cheat = false -- Example modules are not shown to normal players
