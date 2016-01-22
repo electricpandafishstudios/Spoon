@@ -19,3 +19,112 @@
 [0121/225937:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
 [0121/225937:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
 [0121/225940:INFO:CONSOLE(17)] "[cycle2] cycle-paused", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150107:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150107:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] timeout: 4000 (number)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] timeout: 3000 (number)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] fx: fadeout (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] timeout: 3000 (number)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] fx: fadeout (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150110:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-launcher (17)
+[0122/150115:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150115:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150118:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150118:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150118:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150118:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150118:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150125:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150125:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150757:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150757:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150801:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150801:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150801:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150801:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150801:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/150807:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/150807:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/151522:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/151522:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/151525:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/151525:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/151525:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/151525:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/151525:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/151532:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/151532:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152312:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152312:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152315:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152315:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152315:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152315:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152315:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152322:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152322:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152427:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152427:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152430:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152430:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152430:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152430:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152430:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/152437:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/152437:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153107:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153107:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153110:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153110:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153110:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153110:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153110:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153117:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153117:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153322:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153322:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153325:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153325:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153325:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153325:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153325:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153327:INFO:CONSOLE(17)] "[cycle2] cycle-paused", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153327:INFO:CONSOLE(17)] "[cycle2] cycle-resumed", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/153332:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/153332:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/155734:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/155734:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/155738:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/155738:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/155738:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/155738:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/155738:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/155745:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/155745:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160112:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160112:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160115:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160115:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160115:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160115:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160115:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160122:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160122:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160158:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160158:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160201:INFO:CONSOLE(17)] "[cycle2] --c2 init--", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160201:INFO:CONSOLE(17)] "[cycle2] random: true (boolean)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160201:INFO:CONSOLE(17)] "[cycle2] timeout: 6000 (number)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160201:INFO:CONSOLE(17)] "[cycle2] fx: scrollHorz (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160201:INFO:CONSOLE(17)] "[cycle2] slides: > div (string)", source: http://te4.org/tooltip-ingame?steam=0&vM=1&vm=3&vp=3&_te4 (17)
+[0122/160208:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
+[0122/160208:INFO:dhcp_proxy_script_adapter_fetcher_win.cc(262)] Error fetching PAC URL from DHCP: 2
