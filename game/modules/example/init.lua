@@ -25,7 +25,7 @@ homepage = "http://te4.org/modules:example"
 version = {1,3,3}
 engine = {1,3,3,"te4"}
 description = [[
-This is *NOT* a game, just an example/template to make your own using the T-Engine4.
+Spoon Game!
 ]]
 starter = "mod.load"
-show_only_on_cheat = true -- Example modules are not shown to normal players
+show_only_on_cheat = false -- Example modules are not shown to normal players
