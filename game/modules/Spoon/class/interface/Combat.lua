@@ -47,7 +47,7 @@ end
 --- Makes the death happen!
 function _M:attackTarget(target, mult)
 	if self.combat then
-		local dam = self.combat.dam + self:getStr() - target.combat_armor
+		local dam = self.combat.dam - target.combat_armor
 		DamageType:get(DamageType.PHYSICAL).projector(self, target.x, target.y, DamageType.PHYSICAL, math.max(0, dam))
 	end
 

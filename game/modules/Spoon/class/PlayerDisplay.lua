@@ -78,7 +78,7 @@ function _M:display()
     self:makeTexture(("%s#{normal}#"):format(player.name), 0, h, colors.GOLD.r, colors.GOLD.g, colors.GOLD.b, self.w) h = h + self.font_h
     self.font:setStyle("normal")
 
-    self:makeTexture(("Str/Dex/Con: #00ff00#%3d/%3d/%3d"):format(player:getStr(), player:getDex(), player:getCon()), x, h, 255, 255, 255) h = h + self.font_h
+    --self:makeTexture(("Str/Dex/Con: #00ff00#%3d/%3d/%3d"):format(player:getStr(), player:getDex(), player:getCon()), x, h, 255, 255, 255) h = h + self.font_h
     self:makeTexture(("A/T/C/G: #00ff00#%3d/%3d/%3d/%3d"):format(player:getA(), player:getT(), player:getC(), player:getG()), x, h, 255, 255, 255) h = h + self.font_h
     h = h + self.font_h
 
