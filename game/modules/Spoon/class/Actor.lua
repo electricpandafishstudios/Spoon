@@ -49,7 +49,7 @@ function _M:init(t, no_default)
 	self.combat_armor = 0
 
 	-- Default regen
-	t.power_regen = t.power_regen or 1
+	--t.power_regen = t.power_regen or 1
 	t.life_regen = t.life_regen or 0.25 -- Life regen real slow
 
 	-- Default melee barehanded damage
@@ -127,11 +127,11 @@ end
 function _M:levelup()
 	self.max_life = self.max_life + 2
 
-	self:incMaxPower(3)
+	--self:incMaxPower(3)
 
 	-- Heal upon new level
 	self.life = self.max_life
-	self.power = self.max_power
+	--self.power = self.max_power
 end
 
 --- Notifies a change of stat value
@@ -153,17 +153,17 @@ end
 function _M:preUseTalent(ab, silent)
 	if not self:enoughEnergy() then print("fail energy") return false end
 
-	if ab.mode == "sustained" then
-		if ab.sustain_power and self.max_power < ab.sustain_power and not self:isTalentActive(ab.id) then
-			game.logPlayer(self, "You do not have enough power to activate %s.", ab.name)
-			return false
-		end
-	else
-		if ab.power and self:getPower() < ab.power then
-			game.logPlayer(self, "You do not have enough power to cast %s.", ab.name)
-			return false
-		end
-	end
+	-- if ab.mode == "sustained" then
+		-- if ab.sustain_power and self.max_power < ab.sustain_power and not self:isTalentActive(ab.id) then
+			-- game.logPlayer(self, "You do not have enough power to activate %s.", ab.name)
+			-- return false
+		-- end
+	-- else
+		-- if ab.power and self:getPower() < ab.power then
+			-- game.logPlayer(self, "You do not have enough power to cast %s.", ab.name)
+			-- return false
+		-- end
+	-- end
 
 	if not silent then
 		-- Allow for silent talents
@@ -192,21 +192,21 @@ function _M:postUseTalent(ab, ret)
 
 	self:useEnergy()
 
-	if ab.mode == "sustained" then
-		if not self:isTalentActive(ab.id) then
-			if ab.sustain_power then
-				self.max_power = self.max_power - ab.sustain_power
-			end
-		else
-			if ab.sustain_power then
-				self.max_power = self.max_power + ab.sustain_power
-			end
-		end
-	else
-		if ab.power then
-			self:incPower(-ab.power)
-		end
-	end
+	-- if ab.mode == "sustained" then
+		-- if not self:isTalentActive(ab.id) then
+			-- if ab.sustain_power then
+				-- self.max_power = self.max_power - ab.sustain_power
+			-- end
+		-- else
+			-- if ab.sustain_power then
+				-- self.max_power = self.max_power + ab.sustain_power
+			-- end
+		-- end
+	-- else
+		-- if ab.power then
+			-- self:incPower(-ab.power)
+		-- end
+	-- end
 
 	return true
 end
@@ -221,7 +221,7 @@ function _M:getTalentFullDescription(t)
 	else d[#d+1] = "#6fff83#Use mode: #00FF00#Activated"
 	end
 
-	if t.power or t.sustain_power then d[#d+1] = "#6fff83#Power cost: #7fffd4#"..(t.power or t.sustain_power) end
+	--if t.power or t.sustain_power then d[#d+1] = "#6fff83#Power cost: #7fffd4#"..(t.power or t.sustain_power) end
 	if self:getTalentRange(t) > 1 then d[#d+1] = "#6fff83#Range: #FFFFFF#"..self:getTalentRange(t)
 	else d[#d+1] = "#6fff83#Range: #FFFFFF#melee/personal"
 	end
