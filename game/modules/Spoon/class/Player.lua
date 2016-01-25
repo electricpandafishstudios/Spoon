@@ -29,6 +29,7 @@ local ActorTalents = require "engine.interface.ActorTalents"
 local DeathDialog = require "mod.dialogs.DeathDialog"
 local Astar = require"engine.Astar"
 local DirectPath = require"engine.DirectPath"
+local LevelUp = require "mod.dialogs.LevelUp"
 
 --- Defines the player
 -- It is a normal actor, with some redefined methods to handle user interaction.<br/>
@@ -135,7 +136,8 @@ end
 
 function _M:levelup()
 	mod.class.Actor.levelup(self)
-
+	local d = LevelUp.new(self)
+	game:registerDialog(d)
 	local x, y = game.level.map:getTileToScreen(self.x, self.y)
 	game.flyers:add(x, y, 80, 0.5, -2, "LEVEL UP!", {0,255,255})
 	game.log("#00ffff#Welcome to level %d.", self.level)
