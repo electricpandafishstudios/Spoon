@@ -20,9 +20,9 @@
 local Talents = require("engine.interface.ActorTalents")
 
 newEntity{
-	define_as = "BASE_NPC_KOBOLD",
-	type = "humanoid", subtype = "kobold",
-	display = "k", color=colors.WHITE,
+	define_as = "BASE_NPC_Virus",
+	type = "humanoid", subtype = "virus",
+	display = "v", color=colors.WHITE,
 	desc = [[Ugly and green!]],
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
@@ -30,19 +30,11 @@ newEntity{
 	combat_armor = 0,
 }
 
-newEntity{ base = "BASE_NPC_KOBOLD",
-	name = "kobold warrior", color=colors.GREEN,
+newEntity{ base = "BASE_NPC_Virus",
+	name = "virus", color=colors.GREEN,
 	level_range = {1, 4}, exp_worth = 1,
 	rarity = 4,
 	max_life = resolvers.rngavg(1,3),
 	combat = { dam=1 },
 }
 
-newEntity{ base = "BASE_NPC_KOBOLD",
-	name = "armoured kobold warrior", color=colors.AQUAMARINE,
-	level_range = {6, 10}, exp_worth = 1,
-	rarity = 4,
-	max_life = resolvers.rngavg(10,12),
-	combat_armor = 3,
-	combat = { dam=5 },
-}
