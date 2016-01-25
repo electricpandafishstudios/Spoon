@@ -27,8 +27,8 @@ local Map = require "engine.Map"
 local Dialog = require "engine.Dialog"
 local ActorTalents = require "engine.interface.ActorTalents"
 local DeathDialog = require "mod.dialogs.DeathDialog"
-local Astar = require"engine.Astar"
-local DirectPath = require"engine.DirectPath"
+local Astar = require "engine.Astar"
+local DirectPath = require "engine.DirectPath"
 local LevelUp = require "mod.dialogs.LevelUp"
 
 --- Defines the player
