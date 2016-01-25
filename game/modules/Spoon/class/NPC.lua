@@ -52,6 +52,14 @@ function _M:onTakeHit(value, src)
 	return mod.class.Actor.onTakeHit(self, value, src)
 end
 
+function _M:die(src)
+	engine.interface.ActorLife.die(self, src)
+	if resolvers.rngpercent(self.drops.A) then
+		src.incStat("A",1)
+	end
+	return true
+end
+
 function _M:tooltip()
 	local str = mod.class.Actor.tooltip(self)
 	return str..([[
