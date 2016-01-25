@@ -15,8 +15,7 @@ function _M:init(actor)
 
 	self:generateList()
 
-	self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[You have gained one level, and now you must
-choose a stat to decrement; but choose wisely. You won't be able to get it back!]]}
+	self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[Spend your bases here]]}
 	self.c_list = List.new{width=self.iw, nb_items=#self.list, list=self.list, fct=function(item) self:use(item) end}
 
 	self:loadUI{
@@ -42,7 +41,6 @@ function _M:use(item)
 		self.actor:incStat(game.player.STAT_G, -1)
 	end
 	game:unregisterDialog(self)
-	self.actor:recalculateStats()
 end
 
 function _M:generateList()

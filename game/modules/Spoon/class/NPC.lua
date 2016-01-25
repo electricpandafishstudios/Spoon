@@ -54,9 +54,16 @@ end
 
 function _M:die(src)
 	engine.interface.ActorLife.die(self, src)
-	if resolvers.rngpercent(self.drops.A) then
-		src.incStat("A",1)
-	end
+	if rng.percent(self.drops.A) then
+		src:incStat("A", 1)
+	elseif rng.percent(self.drops.U) then
+		src:incStat("T", 1)
+	elseif rng.percent(self.drops.G) then
+		src:incStat("G", 1)
+	elseif rng.percent(self.drops.C) then
+		src:incStat("C", 1)
+	else end
+	
 	return true
 end
 

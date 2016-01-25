@@ -27,13 +27,13 @@ newEntity{
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
 	stats = {},
-	drops = { A = 80, U = 20, C = 20, G= 20},
+	drops = { A = 20, U = 20, C = 20, G= 20},
 	combat_armor = 0,
 }
 
 newEntity{ base = "BASE_NPC_Virus",
 	name = "virus", color=colors.GREEN,
-	level_range = {1, 4}, exp_worth = 1,
+	level_range = {1, 4}, exp_worth = 0,
 	rarity = 4,
 	max_life = resolvers.rngavg(1,3),
 	combat = { dam=1 },
