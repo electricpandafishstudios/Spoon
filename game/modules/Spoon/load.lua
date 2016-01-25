@@ -46,10 +46,10 @@ ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 -- Actor stats
 
 --Spoon things
-ActorStats:defineStat("Adenine",	"A", 0, 0, 100, "Heats up the action")
-ActorStats:defineStat("Thymine",	"T", 0, 0, 100, "Adds to sturdyness")
-ActorStats:defineStat("Guanine",	"G", 0, 0, 100, "???")
-ActorStats:defineStat("Cytosine",	"C", 0, 0, 100, "Bulk up")
+ActorStats:defineStat("Adenine",	"A", 0, 0, 9, "Heats up the action")
+ActorStats:defineStat("Thymine",	"T", 0, 0, 9, "Adds to sturdyness")
+ActorStats:defineStat("Guanine",	"G", 0, 0, 9, "???")
+ActorStats:defineStat("Cytosine",	"C", 0, 0, 9, "Bulk up")
 
 
 -- Actor AIs
