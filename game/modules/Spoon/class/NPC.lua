@@ -27,6 +27,7 @@ module(..., package.seeall, class.inherit(mod.class.Actor, engine.interface.Acto
 function _M:init(t, no_default)
 	mod.class.Actor.init(self, t, no_default)
 	ActorAI.init(self, t)
+		self.life_regen = 0
 end
 
 function _M:act()
@@ -57,7 +58,7 @@ function _M:die(src)
 	if rng.percent(self.drops.A) then
 		src:incStat("A", 1)
 	elseif rng.percent(self.drops.U) then
-		src:incStat("T", 1)
+		src:incStat("U", 1)
 	elseif rng.percent(self.drops.G) then
 		src:incStat("G", 1)
 	elseif rng.percent(self.drops.C) then

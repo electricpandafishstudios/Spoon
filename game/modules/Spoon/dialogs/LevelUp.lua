@@ -34,7 +34,7 @@ function _M:use(item)
 	if act == "A" then
 		self.actor:incStat(game.player.STAT_A, -1)
 	elseif act == "U" then
-		self.actor:incStat(game.player.STAT_T, -1)
+		self.actor:incStat(game.player.STAT_U, -1)
 	elseif act == "C" then
 		self.actor:incStat(game.player.STAT_C, -1)
 	elseif act == "G" then

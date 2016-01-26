@@ -35,7 +35,7 @@ newEntity{ base = "BASE_NPC_Virus",
 	name = "virus", color=colors.GREEN,
 	level_range = {1, 4}, exp_worth = 0,
 	rarity = 4,
-	max_life = resolvers.rngavg(1,3),
+	max_life = 2,
 	combat = { dam=1 },
 }
 

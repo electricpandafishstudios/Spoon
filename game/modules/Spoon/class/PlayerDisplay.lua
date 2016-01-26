@@ -75,13 +75,11 @@ function _M:display()
     local x = 2
     
     self.font:setStyle("bold")
---    self:makeTexture(("%s#{normal}#"):format(player.name), 0, h, colors.GOLD.r, colors.GOLD.g, colors.GOLD.b, self.w) h = h + self.font_h
     self.font:setStyle("normal")
 	
-    self:makeTexture(("A:%3d T:%3d C:%3d G:%3d"):format(player:getA(), player:getT(), player:getC(), player:getG()), x, h, 255, 255, 255) h = h + self.font_h
+    self:makeTexture(("A:%3d U:%3d C:%3d G:%3d"):format(player:getA(), player:getU(), player:getC(), player:getG()), x, h, 255, 255, 255) h = h + self.font_h
     h = h + self.font_h
 
---    self:makeTextureBar("#c00000#Life:", nil, player.life, player.max_life, player.life_regen * util.bound((player.healing_factor or 1), 0, 2.5), x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
 	self:makeTextureBar("#c00000#Life:", nil, player.life, player.max_life, nil, x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
 	
     --self:makeTextureBar("#ffcc80#Power:", nil, player:getPower(), player.max_power, player.power_regen, x, h, 255, 255, 255, colors.DARK_BLUE, {r=colors.DARK_BLUE.r/2, g=colors.DARK_BLUE.g/2, b=colors.DARK_BLUE.b/2}) h = h + self.font_h

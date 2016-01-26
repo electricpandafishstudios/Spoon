@@ -50,7 +50,7 @@ function _M:init(t, no_default)
 
 	-- Default regen
 	--t.power_regen = t.power_regen or 1
-	t.life_regen = t.life_regen or 0.25 -- Life regen real slow
+	t.life_regen = t.life_regen or 0.1 -- Life regen real slow
 
 	-- Default melee barehanded damage
 	self.combat = { dam=1 }
