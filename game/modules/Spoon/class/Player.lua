@@ -25,6 +25,7 @@ require "engine.interface.PlayerMouse"
 require "engine.interface.PlayerHotkeys"
 local Map = require "engine.Map"
 local Dialog = require "engine.Dialog"
+local ActorCodons = require "mod.class.interface.ActorCodons"
 local ActorTalents = require "engine.interface.ActorTalents"
 local DeathDialog = require "mod.dialogs.DeathDialog"
 local Astar = require "engine.Astar"
@@ -57,7 +58,9 @@ function _M:init(t, no_default)
 
 	mod.class.Actor.init(self, t, no_default)
 	engine.interface.PlayerHotkeys.init(self, t)
-
+	self.codons = {
+	[ActorCodons.C_HP]=1,
+	}
 	self.descriptor = {}
 end
 

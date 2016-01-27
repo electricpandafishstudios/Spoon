@@ -20,6 +20,7 @@
 -- This file loads the game module, and loads data
 local KeyBind = require "engine.KeyBind"
 local DamageType = require "engine.DamageType"
+local ActorCodons = require "mod.class.interface.ActorCodons"
 local ActorStats = require "engine.interface.ActorStats"
 local ActorResource = require "engine.interface.ActorResource"
 local ActorTalents = require "engine.interface.ActorTalents"
@@ -34,6 +35,8 @@ KeyBind:load("move,hotkeys,inventory,actions,interface,debug")
 -- Damage types
 DamageType:loadDefinition("/data/damage_types.lua")
 
+ActorCodons:loadDefinition("/data/codons.lua")
+
 -- Talents
 ActorTalents:loadDefinition("/data/talents.lua")
 
@@ -43,7 +46,6 @@ ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 -- Actor resources
 --ActorResource:defineResource("Power", "power", nil, "power_regen", "Power represent your ability to use special talents.")
 
--- Actor stats
 
 --Spoon things
 ActorStats:defineStat("Adenine",	"A", 0, 0, 9, "Heats up the action")

@@ -42,4 +42,7 @@ newBirthDescriptor{
 	talents = {
 		[ActorTalents.T_FIRE_BALL]=1,
 	},
+	-- codons = {
+		-- [ActorCodons.C_HP]=1,
+	-- },
 }
