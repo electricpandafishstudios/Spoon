@@ -70,13 +70,13 @@ function _M:newCodon(c)
 	table.insert(self.codons_types_def[c.type[1]].codons, c)
 end
 
-function _M:learnCodon(c_id)
+function _M:gainCodon(c_id)
 	local c = _M.codons_def[c_id]
 
 	self.codons[c_id] = (self.codons[t_id] or 0) + 1
 	
 	if c.on_learn then
-			local ret = c.on_learn(self, c)
+			local ret = c.on_gain(self, c)
 			if ret then
 				if ret == true then ret = {} end
 				self.codons_learn_vals[c.id] = self.codons_learn_vals[c.id] or {}
