@@ -11,7 +11,7 @@ module(..., package.seeall, class.inherit(Dialog))
 
 function _M:init(actor)
 	self.actor = actor
-	Dialog.init(self, "Level Increased!", 500, 300)
+	Dialog.init(self, "New Codon Available!", 500, 300)
 
 	self:generateList()
 
