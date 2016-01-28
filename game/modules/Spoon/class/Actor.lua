@@ -126,7 +126,6 @@ function _M:die(src)
 end
 
 function _M:levelup()
-	self.max_life = self.max_life + 2
 
 	--self:incMaxPower(3)
 

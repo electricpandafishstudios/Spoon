@@ -42,6 +42,7 @@ function _M:newCodon(c)
 	c.__ATOMIC = true
 	assert(c.name, "no codon name")
 	assert(c.type, "no or unknown codon type")
+	assert(c.sequences, {"UUU"})
 	if type(c.type) == "string" then c.type = {c.type, 1} end
 	if not c.type[2] then c.type[2] = 1 end
 	c.short_name = c.short_name or c.name
@@ -76,7 +77,7 @@ function _M:gainCodon(c_id)
 
 	--self.codons[c_id] = (self.codons[t_id] or 0) + 1
 	self.codons[l + 1] = c_id
-	
+
 	if c.on_gain then
 		c.on_gain(self, c)
 		--local ret = c.on_gain(self, c)
@@ -98,4 +99,3 @@ function _M:init(c)
 	--self.codons_confirm_use = self.codons_confirm_use or {}
 	--self.codons_learn_vals = c.codons_learn_vals or {}
 end
-

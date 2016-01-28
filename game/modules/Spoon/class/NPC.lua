@@ -55,16 +55,25 @@ end
 
 function _M:die(src)
 	engine.interface.ActorLife.die(self, src)
+	local boolean drop = false
 	if rng.percent(self.drops.A) then
 		src:incStat("A", 1)
+		drop = true
 	elseif rng.percent(self.drops.U) then
 		src:incStat("U", 1)
+		drop = true
 	elseif rng.percent(self.drops.G) then
 		src:incStat("G", 1)
+		drop = true
 	elseif rng.percent(self.drops.C) then
 		src:incStat("C", 1)
+		drop = true
 	else end
-	
+
+	local canlevel = src:canlevelup()
+	if drop and canlevel then
+	 	src:levelup()
+	end
 	return true
 end
 

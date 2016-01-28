@@ -11,7 +11,7 @@ module(..., package.seeall, class.inherit(Dialog))
 
 function _M:init(actor)
 	self.actor = actor
-	Dialog.init(self, "Level Increased!", 500, 300)
+	Dialog.init(self, "New Codon Available!", 500, 300)
 
 	self:generateList()
 
@@ -31,14 +31,21 @@ function _M:use(item)
 	if not item then return end
 	local act = item.action
 
-	if act == "A" then
+	if act == "HP" then
+		self.actor:gainCodon("C_HP")
 		self.actor:incStat(game.player.STAT_A, -1)
-	elseif act == "U" then
-		self.actor:incStat(game.player.STAT_U, -1)
-	elseif act == "C" then
-		self.actor:incStat(game.player.STAT_C, -1)
-	elseif act == "G" then
 		self.actor:incStat(game.player.STAT_G, -1)
+		self.actor:incStat(game.player.STAT_C, -1)
+	elseif act == "DAM" then
+		self.actor:gainCodon("C_DAM")
+		self.actor:incStat(game.player.STAT_U, -1)
+		self.actor:incStat(game.player.STAT_G, -1)
+		self.actor:incStat(game.player.STAT_C, -1)
+	elseif act == "FB" then
+		self.actor:gainCodon("C_FIRE_BALL")
+		self.actor:incStat(game.player.STAT_A, -1)
+		self.actor:incStat(game.player.STAT_G, -1)
+		self.actor:incStat(game.player.STAT_U, -1)
 	end
 	game:unregisterDialog(self)
 end
@@ -46,9 +53,8 @@ end
 function _M:generateList()
 	local list = {}
 
-	list[#list+1] = {name="A: Heats up the action", action ="A"}
-	list[#list+1] = {name="U: Adds to Sturdiness", action ="U"}
-	list[#list+1] = {name="G: ???", action ="G"}
-	list[#list+1] = {name="C: Bulk Up", action ="C"}
+	list[#list+1] = {name="HP: Adds one point of health. (AGC)", action ="HP"}
+	list[#list+1] = {name="Attack: Adds one point of damage. (UGC)", action ="DAM"}
+	list[#list+1] = {name="Fire Ball: Grants Fire Ball ability. (AGU)", action ="FB"}
 	self.list = list
 end
