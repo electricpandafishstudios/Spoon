@@ -99,13 +99,11 @@ end
 
 function _M:tooltip()
 	return ([[%s%s
-#00ffff#Level: %d
 #ff0000#HP: %d (%d%%)
 %s]]):format(
 	self:getDisplayString(),
 	self.name,
-	self.level,
-	self.life, self.life * 100 / self.max_life,
+	self.life, (self.life / self.max_life) * 100,
 	self.desc or ""
 	)
 end
