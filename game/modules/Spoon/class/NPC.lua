@@ -55,7 +55,10 @@ end
 
 function _M:die(src)
 	engine.interface.ActorLife.die(self, src)
+	
 	local boolean drop = false
+	local amt = self.drops.amt
+	for i=0,amt do
 	if rng.percent(self.drops.A) then
 		src:incStat("A", 1)
 		drop = true
@@ -69,6 +72,7 @@ function _M:die(src)
 		src:incStat("C", 1)
 		drop = true
 	else end
+	end
 
 	local canlevel = src:canlevelup()
 	if drop and canlevel then
