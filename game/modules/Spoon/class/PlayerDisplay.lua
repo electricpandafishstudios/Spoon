@@ -48,7 +48,7 @@ function _M:makeTextureBar(text, nfmt, val, max, reg, x, y, r, g, b, bar_col, ba
     s:erase(bar_col.r, bar_col.g, bar_col.b, 255, self.bars_x, h, self.bars_w * val / max, self.font_h)
 
     s:drawColorStringBlended(self.font, text, 0, 0, r, g, b, true)
-    s:drawColorStringBlended(self.font, (nfmt or "%d/%d"):format(val, max), self.bars_x + 5, 0, r, g, b)
+	s:drawColorStringBlended(self.font, (nfmt or "%d/%d"):format(val, max), self.bars_x, 0, r, g, b)
     if reg and reg ~= 0 then
         local reg_txt = (" (%s%.2f)"):format((reg > 0 and "+") or "",reg)
         local reg_txt_w = self.font:size(reg_txt)

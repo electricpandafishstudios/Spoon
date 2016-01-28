@@ -65,12 +65,12 @@ function _M:run()
 	self.tooltip = Tooltip.new(nil, nil, {255,255,255}, {30,30,30})
 	self.flyers = FlyingText.new()
 	self:setFlyingText(self.flyers)
-	--dialogue
-	self.player_display = PlayerDisplay.new(0, 0, 200, self.h, {30,30,0}, "/data/font/VeraMono.ttf", 12) 
+
 
 	self.log = function(style, ...) if type(style) == "number" then self.logdisplay(...) self.flash(style, ...) else self.logdisplay(style, ...) self.flash(self.flash.NEUTRAL, style, ...) end end
 	self.logSeen = function(e, style, ...) if e and self.level.map.seens(e.x, e.y) then self.log(style, ...) end end
 	self.logPlayer = function(e, style, ...) if e == self.player then self.log(style, ...) end end
+	self.player_display = PlayerDisplay.new(0, 0, 200, 75, {30,30,0}, "/data/font/VeraMono.ttf", 12) 
 
 	self.log(self.flash.GOOD, "Welcome to #00FF00#Spoon!")
 	self.player_display:toScreen(nb_keyframe)
@@ -107,6 +107,7 @@ function _M:newGame()
 		self.player:resolve()
 		self.player:resolve(nil, true)
 		self.player.energy.value = self.energy_to_act
+		self.player.life = self.player.max_life
 		self.paused = true
 		self.creating_player = false
 		print("[PLAYER BIRTH] resolved!")
