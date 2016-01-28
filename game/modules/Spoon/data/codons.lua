@@ -18,7 +18,7 @@ newCodon{
 	type = {"normal"},
 	sequences = {"UGC"},
 	on_gain = function(self, c)
-		self.dam = self.dam + 1
+		self.combat.dam = self.combat.dam + 1
 	end,
 	info = function(self, c)
 		return "Ups damage."
