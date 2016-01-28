@@ -72,18 +72,20 @@ end
 
 function _M:gainCodon(c_id)
 	local c = _M.codons_def[c_id]
+	local l = table.getn(self.codons)
 
-	self.codons[c_id] = (self.codons[t_id] or 0) + 1
+	--self.codons[c_id] = (self.codons[t_id] or 0) + 1
+	self.codons[l + 1] = c_id
 	
-	if c.on_learn then
-			local ret = c.on_gain(self, c)
-			if ret then
-				if ret == true then ret = {} end
-				self.codons_learn_vals[c.id] = self.codons_learn_vals[c.id] or {}
-				self.codons_learn_vals[c.id][self.codons[c_id]] = ret
-			end
-		end
-	return true
+	if c.on_gain then
+		c.on_gain(self, c)
+		--local ret = c.on_gain(self, c)
+		--if ret then
+			--if ret == true then ret = {} end
+			--self.codons_learn_vals[l+1] = self.codons_learn_vals[l+1] or {}
+			--self.codons_learn_vals[l+1][self.codons[l+1]] = ret
+		--end
+	end
 end
 --- Initialises stats with default values if needed
 function _M:init(c)
@@ -94,6 +96,6 @@ function _M:init(c)
 	--self.sustain_codons = self.sustain_codons or {}
 	--self.codons_auto = self.codons_auto or {}
 	--self.codons_confirm_use = self.codons_confirm_use or {}
-	self.codons_learn_vals = c.codons_learn_vals or {}
+	--self.codons_learn_vals = c.codons_learn_vals or {}
 end
 
