@@ -70,7 +70,10 @@ function _M:die(src)
 		drop = true
 	else end
 
-	if drop then src:levelup() end
+	local canlevel = src:canlevelup()
+	if drop and canlevel then
+	 	src:levelup()
+	end
 	return true
 end
 
