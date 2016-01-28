@@ -23,7 +23,7 @@ short_name = "spoon"
 author = { "people" }
 homepage = "N/A"
 version = {0,0,1}
-engine = {1,3,3,"te4"}
+engine = {1,4,1,"te4"}
 description = [[
 Spoon Game pre-pre-alpha!
 ]]

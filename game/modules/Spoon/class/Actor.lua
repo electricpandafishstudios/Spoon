@@ -41,7 +41,8 @@ module(..., package.seeall, class.inherit(
 	engine.interface.ActorTalents,
 	engine.interface.ActorResource,
 	engine.interface.ActorFOV,
-	mod.class.interface.Combat
+	mod.class.interface.Combat,
+	mod.class.interface.ActorCodons
 ))
 
 function _M:init(t, no_default)
