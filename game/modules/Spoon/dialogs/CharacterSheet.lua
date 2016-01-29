@@ -42,8 +42,8 @@ function _M:drawDialog()
 
    s:drawStringBlended(self.font, "A: "..(player:getA()), w, h, 0, 255, 255, true) h = h + self.font_h
    s:drawStringBlended(self.font, "U: "..(player:getU()), w, h, 255, 0, 255, true) h = h + self.font_h
-   s:drawStringBlended(self.font, "G: "..(player:getG()), w, h, 255, 255, 0, true) h = h + self.font_h
    s:drawStringBlended(self.font, "C: "..(player:getC()), w, h, 0, 255, 255, true) h = h + self.font_h
+   s:drawStringBlended(self.font, "G: "..(player:getG()), w, h, 255, 255, 0, true) h = h + self.font_h
 
    s:drawStringBlended(self.font, "Codons: ", w, h, 0, 255, 255, true) h = h + self.font_h
    for i, v in ipairs(player.codons) do
