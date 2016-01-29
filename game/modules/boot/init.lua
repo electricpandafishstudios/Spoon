@@ -17,10 +17,10 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-name = "Boot Example"
-long_name = "T-Engine4 Main Menu simple example"
+name = "Boot Spoon"
+long_name = "Spoon"
 short_name = "boot"
-author = { "DarkGod", "darkgod@te4.org" }
+author = { "TBA", "N/A" }
 homepage = "http://te4.org/"
 is_boot = true
 version = {1,0,0}

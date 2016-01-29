@@ -33,6 +33,6 @@ newCodon{
 		self:learnTalent("T_FIRE_BALL", true, 1)
 	end,
 	info = function(self, c)
-		return "Ups damage."
+		return "FIRE."
 	end,
 }

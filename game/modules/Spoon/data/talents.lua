@@ -17,12 +17,12 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-newTalentType{ type="role/combat", name = "combat", description = "Combat techniques" }
+newTalentType{ type="combat", name = "combat", description = "Combat techniques" }
 
 newTalent{
 	name = "Fire Ball",
-	type = {"role/combat", 1},
-	points = 1,
+	type = {"combat"},
+	points = 1000,
 	cooldown = 6,
 	power = 0,
 	range = 6,
