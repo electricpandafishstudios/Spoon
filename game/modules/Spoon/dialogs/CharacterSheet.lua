@@ -35,11 +35,10 @@ function _M:drawDialog()
 
    local h = 0
    local w = 0
-
    h = 0
    w = 0
    -- start on second column
-
+   s.drawStringBlended(self.font, "Max Health: "..player.max_life, w, h, 0, 255, 255, true) h = h + self.font_h
    s:drawStringBlended(self.font, "A: "..(player:getA()), w, h, 0, 255, 255, true) h = h + self.font_h
    s:drawStringBlended(self.font, "U: "..(player:getU()), w, h, 255, 0, 255, true) h = h + self.font_h
    s:drawStringBlended(self.font, "C: "..(player:getC()), w, h, 0, 255, 255, true) h = h + self.font_h
