@@ -3,6 +3,7 @@ local Dialog = require "engine.ui.Dialog"
 local Textzone = require "engine.ui.Textzone"
 local Separator = require "engine.ui.Separator"
 local List = require "engine.ui.List"
+local Button = require "engine.ui.Button"
 local Savefile = require "engine.Savefile"
 local Map = require "engine.Map"
 
@@ -11,17 +12,26 @@ module(..., package.seeall, class.inherit(Dialog))
 
 function _M:init(actor)
 	self.actor = actor
-	Dialog.init(self, "New Codon Available!", 500, 300)
+	Dialog.init(self, "Available Aminos!", 800, 500)
 
 	self:generateList()
 
-	self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[Spend your bases here]]}
-	self.c_list = List.new{width=self.iw, nb_items=#self.list, list=self.list, fct=function(item) self:use(item) end}
+	--self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[Spend your bases here]]}
+	--self.c_list = List.new{width=self.iw, nb_items=#self.list, list=self.list, fct=function(item) self:use(item) end}
+	self.b_types = Button.new{can_focus = false, can_focus_mouse=true, text="AAA", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
 
 	self:loadUI{
-		{left=0, top=0, ui=self.c_desc},
-		{left=5, top=self.c_desc.h, padding_h=10, ui=Separator.new{dir="vertical", size=self.iw - 10}},
-		{left=0, bottom=0, ui=self.c_list},
+		--{left=0, top=0, ui=self.c_desc},
+		--{left=5, top=self.c_desc.h, padding_h=10, ui=Separator.new{dir="vertical", size=self.iw - 10}},
+		{left=0, top=0, ui=self.b_types}
 	}
 	self:setFocus(self.c_list)
 	self:setupUI(false, true)
@@ -29,7 +39,7 @@ end
 
 function _M:use(item)
 	if not item then return end
-	local act = item.action
+	local act = item
 
 	if act == "HP" then
 		self.actor:gainCodon("C_HP")
@@ -51,10 +61,12 @@ function _M:use(item)
 end
 
 function _M:generateList()
-	local list = {}
+	profile.chat:selectChannel("tome")
 
-	list[#list+1] = {name="HP: Adds one point of health. (AGC)", action ="HP"}
-	list[#list+1] = {name="Attack: Adds one point of damage. (UGC)", action ="DAM"}
-	list[#list+1] = {name="Fire Ball: Grants Fire Ball ability. (AGU)", action ="FB"}
-	self.list = list
+	-- Makes up the list
+	local list = {}
+	for i=0,16 do
+			list[#list+1] = { player="name", character="char"}
+	end
+	self.list=list
 end
