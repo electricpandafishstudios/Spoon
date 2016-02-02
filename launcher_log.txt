@@ -9,15 +9,15 @@ OS: WINDOWS
 BITNESS: 32
 [ENGINE] Setting requested FPS to 30 (33 ms)
 OS String: windows
-Self path: d:\personal files\documents\spoon
+Self path: c:\users\spencer\documents\github\spoon
 Self file: t-engine-launcher.exe
-Install folder default to:	C:\Program Files (x86)\ToME
-WebCore config: library(d:\personal files\documents\spoon\te4-web.dll) spawn(d:\personal files\documents\spoon\cef3spawn.exe)
+Install folder default to:	c:\users\spencer\documents\github\spoon
+WebCore config: library(c:\users\spencer\documents\github\spoon\te4-web.dll) spawn(c:\users\spencer\documents\github\spoon\cef3spawn.exe)
 Loading WebCore: loaded!
 Running webview check
 Running webview...
 Webview with	490	160	http://te4.org/tooltip-launcher
-Updating 	table: 028205F0	nil	nil
+Updating 	table: 03AF7368	nil	nil
 Setting resolution to 700x350
 Getting newest launcher version path
 [cURL] Adding new request: http://te4.org/get-updater/13/windows, now 1
@@ -25,11 +25,10 @@ Getting newest launcher version path
 [cURL] Downloaded successfully
 [cURL] Confirming finish...confirmed: http://te4.org/get-updater/13/windows
 Launcher is up-to-date
-current ToME engine version: 1.3.3
-[cURL] Adding new request: http://te4.org/get-patch/1.3.3/windows, now 2
+current ToME engine version: 1.4.1[copy]
+[cURL] Adding new request: http://te4.org/get-patch/1.4.1[copy]/windows, now 2
 [cURL] Deleting request: http://te4.org/get-updater/13/windows now 1
-[cURL] Starting download: http://te4.org/get-patch/1.3.3/windows
+[cURL] Starting download: http://te4.org/get-patch/1.4.1[copy]/windows
 [cURL] Downloaded successfully
-[cURL] Confirming finish...confirmed: http://te4.org/get-patch/1.3.3/windows
-[cURL] Deleting request: http://te4.org/get-patch/1.3.3/windows now 0
-Run t-engine: d:\personal files\documents\spoon/t-engine
+[cURL] Confirming finish...confirmed: http://te4.org/get-patch/1.4.1[copy]/windows
+[cURL] Deleting request: http://te4.org/get-patch/1.4.1[copy]/windows now 0

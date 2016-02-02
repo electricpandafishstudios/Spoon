@@ -74,10 +74,10 @@ function _M:die(src)
 	else end
 	end
 
-	local canlevel = src:canlevelup()
-	if drop and canlevel then
-	 	src:levelup()
-	end
+	-- local canlevel = src:canlevelup()
+	-- if drop and canlevel then
+	 	-- src:levelup()
+	-- end
 	return true
 end
 

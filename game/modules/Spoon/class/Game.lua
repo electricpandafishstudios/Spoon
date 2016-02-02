@@ -344,6 +344,10 @@ function _M:setupCommands()
 		REST = function()
 			self.player:restInit()
 		end,
+		
+		LEVELUP = function()
+			self:registerDialog(require("mod.dialogs.LevelUp").new(self.player))
+		end,
 
 		USE_TALENTS = function()
 			self.player:useTalents()
