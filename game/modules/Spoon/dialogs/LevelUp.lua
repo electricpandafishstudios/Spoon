@@ -18,7 +18,7 @@ function _M:init(actor)
 
 	--self.c_desc = Textzone.new{width=self.iw, auto_height=true, text=[[Spend your bases here]]}
 	--self.c_list = List.new{width=self.iw, nb_items=#self.list, list=self.list, fct=function(item) self:use(item) end}
-	self.b_types = Button.new{can_focus = false, can_focus_mouse=true, text="AAA", fct=function() self:use("HP") end, on_select=function()
+	self.b_1 = Button.new{can_focus = false, can_focus_mouse=true, text="UUU", fct=function() self:use("HP") end, on_select=function()
 		local str = desc_types
 		if self.no_tooltip then
 			self.c_desc:erase()
@@ -27,13 +27,66 @@ function _M:init(actor)
 			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
 		end
 	end}
+	self.b_2 = Button.new{can_focus = false, can_focus_mouse=true, text="UUC", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
+	self.b_3 = Button.new{can_focus = false, can_focus_mouse=true, text="UUA", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
+	self.b_4 = Button.new{can_focus = false, can_focus_mouse=true, text="UUG", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
+	self.b_5 = Button.new{can_focus = false, can_focus_mouse=true, text="CUU", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
+	self.b_6 = Button.new{can_focus = false, can_focus_mouse=true, text="CUC", fct=function() self:use("HP") end, on_select=function()
+		local str = desc_types
+		if self.no_tooltip then
+			self.c_desc:erase()
+			self.c_desc:switchItem(str, str, true)
+		-- elseif self.b_stat.last_display_x then
+			-- game:tooltipDisplayAtMap(self.b_stat.last_display_x + self.b_stat.w, self.b_stat.last_display_y, str)
+		end
+	end}
+	self.a_1 = Textzone.new{width=90, height=130, text=[[HP]], has_box=true}
 
 	self:loadUI{
 		--{left=0, top=0, ui=self.c_desc},
 		--{left=5, top=self.c_desc.h, padding_h=10, ui=Separator.new{dir="vertical", size=self.iw - 10}},
-		{left=0, top=0, ui=self.b_types}
+		{left=0, top=0, ui=self.b_1},
+		{left=0, top=self.b_1.h-6, ui=self.b_2},
+		{left=0, top=(self.b_1.h-6) * 2, ui=self.b_3},
+		{left=0, top=(self.b_1.h-6) * 3, ui=self.b_4},
+		{left=0, top=(self.b_1.h-6) * 4, ui=self.b_5},
+		{left=0, top=(self.b_1.h-6) * 5, ui=self.b_6},
+		{left=self.b_1.w+2, top=10, ui=self.a_1}
 	}
-	self:setFocus(self.c_list)
+	self.key:addBind("EXIT", function() game:unregisterDialog(self) end)
+	self:setFocus(self.b_1)
 	self:setupUI(false, true)
 end
 
