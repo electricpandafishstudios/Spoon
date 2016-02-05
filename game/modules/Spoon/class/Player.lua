@@ -136,27 +136,13 @@ function _M:onTalentCooledDown(tid)
 	game.log("#00ff00#Talent %s is ready to use.", t.name)
 end
 
---Checks to see if player can level
-function _M:canlevelup()
-	if self:getStat("A") < 1 then
-		return false
-	elseif self:getStat("U") < 1 then
-		return false
-	elseif self:getStat("G") < 1 then
-		return false
-	elseif self:getStat("C") < 1 then
-		return false
-	else
-		return true
-	end
-end
 
 function _M:levelup()
 	mod.class.Actor.levelup(self)
-	local d = LevelUp.new(self)
-	game:registerDialog(d)
+	--local d = LevelUp.new(self)
+	--game:registerDialog(d)
 	local x, y = game.level.map:getTileToScreen(self.x, self.y)
-	game.flyers:add(x, y, 80, 0.5, -2, "New Codon Available!", {0,255,255})
+	game.flyers:add(x, y, 80, 0.5, -2, "New Amino Added!", {0,255,255})
 	game.log("#00ffff#Acid chain mutated.", self.level)
 end
 
