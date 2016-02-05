@@ -28,28 +28,31 @@ function _M:init(actor)
 end
 
 function _M:drawDialog()
-   local player = self.actor
-   local s = self.c_desc.s
+	local player = self.actor
+	local s = self.c_desc.s
 
-   s:erase(0,0,0,0)
+	s:erase(0,0,0,0)
 
-   local h = 0
-   local w = 0
+	local h = 0
+	local w = 0
 
-   h = 0
-   w = 0
-   -- start on second column
+	s:drawStringBlended(self.font, "U: "..(player:getU()), w, h, 255, 0, 255, true) h = h + self.font_h
+	s:drawStringBlended(self.font, "C: "..(player:getC()), w, h, 0, 255, 255, true) h = h + self.font_h
+	s:drawStringBlended(self.font, "A: "..(player:getA()), w, h, 0, 255, 255, true) h = h + self.font_h
+	s:drawStringBlended(self.font, "G: "..(player:getG()), w, h, 255, 255, 0, true) h = h + self.font_h
+   
+	h = h + self.font_h
+   
+	s:drawStringBlended(self.font, ("Life: %d/%d"):format(player.life,player.max_life), w, h, 255, 255, 0, true) h = h + self.font_h
+	s:drawStringBlended(self.font, ("Damage: %d"):format(player.combat.dams), w, h, 255, 255, 0, true) h = h + self.font_h
+   
+	h = h + self.font_h
+   
+	s:drawStringBlended(self.font, "Aminos: ", w, h, 0, 255, 255, true) h = h + self.font_h
+	for i, v in ipairs(player.aminos) do
+		s:drawStringBlended(self.font, i..": "..v, w, h, 0, 255, 255, true) h = h + self.font_h
+	end
 
-   s:drawStringBlended(self.font, "A: "..(player:getA()), w, h, 0, 255, 255, true) h = h + self.font_h
-   s:drawStringBlended(self.font, "U: "..(player:getU()), w, h, 255, 0, 255, true) h = h + self.font_h
-   s:drawStringBlended(self.font, "C: "..(player:getC()), w, h, 0, 255, 255, true) h = h + self.font_h
-   s:drawStringBlended(self.font, "G: "..(player:getG()), w, h, 255, 255, 0, true) h = h + self.font_h
-
-   s:drawStringBlended(self.font, "Codons: ", w, h, 0, 255, 255, true) h = h + self.font_h
-   for i, v in ipairs(player.codons) do
-     s:drawStringBlended(self.font, i..": "..v, w, h, 0, 255, 255, true) h = h + self.font_h
-   end
-
-   self.c_desc:generate()
-   self.changed = false
+	self.c_desc:generate()
+	self.changed = false
 end
