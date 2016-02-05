@@ -27,7 +27,7 @@ newEntity{
 
 	ai = "dumb_talented_simple", ai_state = { talent_in=3, },
 	stats = {},
-	drops = { amt = 1, U = 45, C = 15, A = 15, G= 15},
+	drops = { amt = 1, U = 22.5, C = 7.5, A = 7.5, G= 7.5},
 	combat_armor = 0,
 }
 
