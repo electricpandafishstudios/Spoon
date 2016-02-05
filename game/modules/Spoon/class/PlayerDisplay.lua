@@ -77,7 +77,7 @@ function _M:display()
     self.font:setStyle("bold")
     self.font:setStyle("normal")
 	
-    self:makeTexture(("A:%3d U:%3d C:%3d G:%3d"):format(player:getA(), player:getU(), player:getC(), player:getG()), x, h, 255, 255, 255) h = h + self.font_h
+    self:makeTexture(("U:%3d C:%3d A:%3d G:%3d"):format(player:getU(), player:getC(), player:getA(), player:getG()), x, h, 255, 255, 255) h = h + self.font_h
     h = h + self.font_h
 
 	self:makeTextureBar("#c00000#Life:", nil, player.life, player.max_life, nil, x, h, 255, 255, 255, colors.DARK_RED, colors.VERY_DARK_RED) h = h + self.font_h
