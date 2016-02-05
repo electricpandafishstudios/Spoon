@@ -1,0 +1,4 @@
+[WEBCORE] Shutdown starting...
+[WEBCORE] Sending kill to all browsers (0)
+[WEBCORE] all browsers dead, shutting down
+[WEBCORE] all browsers dead, shutdown completed

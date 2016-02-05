@@ -20,7 +20,7 @@
 -- This file loads the game module, and loads data
 local KeyBind = require "engine.KeyBind"
 local DamageType = require "engine.DamageType"
-local ActorCodons = require "mod.class.interface.ActorCodons"
+local ActorAminos = require "mod.class.interface.ActorAminos"
 local ActorStats = require "engine.interface.ActorStats"
 local ActorResource = require "engine.interface.ActorResource"
 local ActorTalents = require "engine.interface.ActorTalents"
@@ -35,7 +35,7 @@ KeyBind:load("move,hotkeys,inventory,actions,interface,debug")
 -- Damage types
 DamageType:loadDefinition("/data/damage_types.lua")
 
-ActorCodons:loadDefinition("/data/codons.lua")
+ActorAminos:loadDefinition("/data/aminos.lua")
 
 -- Talents
 ActorTalents:loadDefinition("/data/talents.lua")

@@ -209,11 +209,11 @@ function _M:use(item)
 	local act = item
 
 	if act == "HP" then
-		self.actor:gainCodon("C_HP")
+		self.actor:gainAmino("A_HP")
 	elseif act == "DAM" then
-		self.actor:gainCodon("C_DAM")
+		self.actor:gainAmino("A_DAM")
 	elseif act == "FB" then
-		self.actor:gainCodon("C_FIRE_BALL")
+		self.actor:gainAmino("A_FIRE_BALL")
 	end
 	self.actor:levelup()
 	game:unregisterDialog(self)

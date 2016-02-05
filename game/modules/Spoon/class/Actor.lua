@@ -42,7 +42,7 @@ module(..., package.seeall, class.inherit(
 	engine.interface.ActorResource,
 	engine.interface.ActorFOV,
 	mod.class.interface.Combat,
-	mod.class.interface.ActorCodons
+	mod.class.interface.ActorAminos
 ))
 
 function _M:init(t, no_default)
@@ -128,7 +128,7 @@ function _M:levelup()
 	--self:incMaxPower(3)
 
 	-- Heal upon new level
-	self.life = self.max_life
+	--self.life = self.max_life
 	--self.power = self.max_power
 end
 

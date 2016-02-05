@@ -1,22 +1,21 @@
-newCodonType{ type = "normal", name = "hp", description = "raises hp"}
+newAminoType{ type = "common", name = "common", description = "do things"}
 
-newCodon{
+newAmino{
 	name = "HP",
-	type = {"normal"},
-	sequences = {"AGC"},
+	type = {"common"},
 	on_gain = function(self, c)
 		self.max_life = self.max_life + 1
-		self.life = self.max_life
+		self.life = self.life + 1
 	end,
 	info = function(self, c)
 		return "Ups HP."
 	end,
 }
 
-newCodon{
+newAmino{
 	name = "Dam",
-	type = {"normal"},
-	sequences = {"UGC"},
+	type = {"common"},
+
 	on_gain = function(self, c)
 		self.combat.dam = self.combat.dam + 1
 	end,
@@ -25,9 +24,9 @@ newCodon{
 	end,
 }
 
-newCodon{
+newAmino{
 	name = "Fire ball",
-	type = {"normal"},
+	type = {"common"},
 	sequences = {"AGU"},
 	on_gain = function(self, c)
 		self:learnTalent("T_FIRE_BALL", true, 1)
