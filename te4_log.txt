@@ -7,7 +7,7 @@ Available video driver: dummy
 NO SELFEXE: bootstrapping from CWD
 Creating save thread
 ===top 2
-Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine-debug.exe
+Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine.exe
 SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
 LuaVM:	LuaJIT 2.0.2	x86
 Creating particles thread 0
@@ -75,28 +75,28 @@ Available resolutions: 640x350x16
 [KEYBINDER] Loaded keybinds: actions
 [KEYBINDER] Loaded keybinds: interface
 [KEYBINDER] Loaded keybinds: debug
-Remapping	HOTKEY_7	table: 0x0ac1b568
-Remapping	SHOW_MAP	table: 0x0ac17800
-Remapping	MOVE_LEFT_UP	table: 0x0abfd578
-setResolution: switching resolution to	1920x1080 Borderless	1920	1080	false	true	(forced)
-Setting resolution to 1920x1080 (windowed, borderless)
-[DO RESIZE] Requested: 1920x1080 (0, 1); zoom 100%
-[DO RESIZE] Got: 1920x1080 (0, 1)
+Remapping	HOTKEY_7	table: 0x08a48608
+Remapping	SHOW_MAP	table: 0x08a486e0
+Remapping	MOVE_LEFT_UP	table: 0x08a48690
+setResolution: switching resolution to	1920x1054 Borderless	1920	1054	false	true	(forced)
+Setting resolution to 1920x1054 (windowed, borderless)
+[DO RESIZE] Requested: 1920x1054 (0, 1); zoom 100%
+[DO RESIZE] Got: 1920x1054 (0, 1)
 OpenGL max texture size: 16384
 setResolution: performing onResolutionChange...
 
-onResolutionChange: resolution changed to 	1920	1080	from	nil	nil
+onResolutionChange: resolution changed to 	1920	1054	from	nil	nil
 onResolutionChange: no game yet!
 Creating profile thread
 [ONLINE PROFILE] fun facts	nil
 LuaVM:	LuaJIT 2.0.2	x86
 [PROFILE] mounted 	online	on /current-profile
-TE4Online starting...
 [PROFILE] unmounted 	online	from /current-profile
 [ENGINE] Setting requested FPS to 30 (33 ms)
 [ENGINE] Switching to turn based
 [SAVEFILE PIPE] force waiting
 Creating module	Spoon	:: (as dir)	true	:: (as team)	nil	
+TE4Online starting...
 Loaded module definition for spoon-0.1.2 using engine te4-1.4.1
 Creating module	boot	:: (as dir)	true	:: (as team)	nil	
 Module mismatch engine version boot-1.0.0 using engine te4-1.0.0
@@ -110,11 +110,14 @@ After fs.reset
 [1] = {
   [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.4.1\
 }
+[2] = {
+  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game
+}
 [MODULE] booting module version	boot-1.0.0
 [ENGINE] Switching to turn based
 Loading savefile 	/save//
 Loading savefile 	/save/player/
-Make wait background texture 1 : 0x1084096512 (0, 1083236352)
+Make wait background texture 1 : 0x1084096512 (0, 1083209728)
 Upgrading black texture to size 262144
 Upgrading black texture to size 4194304
 Using cached font	/data/font/Vera.ttf	12
@@ -131,21 +134,24 @@ Loading savefile 	/save/player/
 [SHADER] Loading from /data/gfx/shaders/full_fbo.lua
 [SHADER] Loaded shader with totalname	full_fbo[]
 New GL Shader program 1
-[PROFILE] Thread connected to profiles.te4.org
-[ONLINE PROFILE] reconnecting to channels
 New GL Shader 2 of type 35632
 [SHADER] created fragment shader from /data/gfx/shaders/full_fbo.frag
 *p 1: Uniform: 0: 1406 gamma
 *p 1: Uniform: 1: 8B5E sceneBuffer
 [GAMMA] Setting gamma correction using fullscreen shader	1.2
+[PROFILE] Thread connected to profiles.te4.org
+[ONLINE PROFILE] reconnecting to channels
 [MUSIC] loading	whatever.ogg	Error loading sound "/data/music/whatever.ogg": The system cannot find the file specified.
 [ENGINE] Setting requested FPS to 30 (33 ms)
 [MODULE LOADER] done loading module	Spoon
 [PROFILE] mounted 	online	on /current-profile
+[PROFILE THREAD] batching CSETs
 [PROFILE] unmounted 	online	from /current-profile
-Wait finished, counted 2, 512 ticks
+Wait finished, counted 2, 754 ticks
 [ENGINE] Setting requested FPS to 2 (500 ms)
 [ENGINE] Setting requested FPS to 30 (33 ms)
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
 [SOUND] loading from	/data/sound/ui/subtle_button_sound.ogg	:=:	sound "/data/sound/ui/subtle_button_sound.ogg" : <static>
 Creating module	Spoon	:: (as dir)	true	:: (as team)	nil	
 Loaded module definition for spoon-0.1.2 using engine te4-1.4.1
@@ -168,36 +174,36 @@ Using cached font	/data/font/DroidSans-Bold.ttf	16
 Deleting shader 1 (is clone 0)
 NO SELFEXE: bootstrapping from CWD
 ===top 2
-Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine-debug.exe
+Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine.exe
 SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
 LuaVM:	LuaJIT 2.0.2	x86
 Destroying particle thread 0 (waiting for mutex)
 Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread 3aceb0)
+Destroying particle thread 0 (waiting for thread 39cef8)
 Cleaning up particle thread 0
 Cleaned up particle thread 0
 Destroyed particle thread 0 (0)
 Destroying particle thread 1 (waiting for mutex)
 Destroying particle thread 1
-Destroying particle thread 1 (waiting for thread 3ad9d8)
+Destroying particle thread 1 (waiting for thread 39da20)
 Cleaning up particle thread 1
 Cleaned up particle thread 1
 Destroyed particle thread 1 (0)
 Destroying particle thread 2 (waiting for mutex)
 Destroying particle thread 2
-Destroying particle thread 2 (waiting for thread 3add00)
+Destroying particle thread 2 (waiting for thread 39dd48)
 Cleaning up particle thread 2
 Cleaned up particle thread 2
 Destroyed particle thread 2 (0)
 Creating particles thread 0
 Creating particles thread 1
 Creating particles thread 2
+LuaVM:	LuaJIT 2.0.2	x86
+LuaVM:	LuaJIT 2.0.2	x86
+LuaVM:	LuaJIT 2.0.2	x86
 Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-LuaVM:	LuaJIT 2.0.2	x86
 ===	
 Reboot using	te4	1.4.1	spoon-0.1.2	player	true
-LuaVM:	LuaJIT 2.0.2	x86
 [ENGINE LOADER] available from dir: 	te4-1.4.1
 [ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=4.000000 , [3]=1.000000 , [4]="te4" , [5]=17.000000 , ["load_dir"]="/engines/te4-1.4.1/" , } , } __byname={["te4-1.4.1"]=true , } 
 [ENGINE LOADER] looked in:
@@ -249,17 +255,17 @@ Available resolutions: 640x350x16
 [KEYBINDER] Loaded keybinds: actions
 [KEYBINDER] Loaded keybinds: interface
 [KEYBINDER] Loaded keybinds: debug
-Remapping	HOTKEY_7	table: 0x09e6d850
-Remapping	SHOW_MAP	table: 0x09e6d8f0
-Remapping	MOVE_LEFT_UP	table: 0x09e6d8a0
-setResolution: switching resolution to	1920x1080 Borderless	1920	1080	false	true	(forced)
-Setting resolution to 1920x1080 (windowed, borderless)
-[DO RESIZE] Requested: 1920x1080 (0, 1); zoom 100%
-[DO RESIZE] Got: 1920x1080 (0, 1)
+Remapping	HOTKEY_7	table: 0x0849d8d8
+Remapping	SHOW_MAP	table: 0x0849d978
+Remapping	MOVE_LEFT_UP	table: 0x0849d928
+setResolution: switching resolution to	1920x1054 Borderless	1920	1054	false	true	(forced)
+Setting resolution to 1920x1054 (windowed, borderless)
+[DO RESIZE] Requested: 1920x1054 (0, 1); zoom 100%
+[DO RESIZE] Got: 1920x1054 (0, 1)
 OpenGL max texture size: 16384
 setResolution: performing onResolutionChange...
 
-onResolutionChange: resolution changed to 	1920	1080	from	nil	nil
+onResolutionChange: resolution changed to 	1920	1054	from	nil	nil
 onResolutionChange: no game yet!
 [ONLINE PROFILE] fun facts	nil
 [PROFILE] mounted 	online	on /current-profile
@@ -285,13 +291,14 @@ After fs.reset
 [ENGINE] Switching to turn based
 Loading savefile 	/save//
 Loading savefile 	/save/player/
-Make wait background texture 1 : 0x1084096512 (0, 1083236352)
+Make wait background texture 1 : 0x1084096512 (0, 1083209728)
 Using cached font	/data/font/Vera.ttf	12
 Using cached font	/data/font/Vera.ttf	12
 Post-processing hooks.
 [MODULE] All hashes validation: 	nil	no online profile active
 [PROFILE] mounted 	offline	on /current-profile
 [PROFILE] unmounted 	offline	from /current-profile
+[PROFILE THREAD] batching CSETs
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
 [MODULE LOADER] loading module	Spoon the game	[mod.load]	::	nil	nil
@@ -328,63 +335,35 @@ Loading entities file from file	/data/zones/dungeon/traps.lua
 Initiated zone	Old ruins	with base_level	1
 Loading zone persistance level	dungeon	1
 Creating level	dungeon	1
-C Map size 53:26 :: 1378
+C Map size 53:25 :: 1325
 C Map seens texture: 113 (60x60)
-loaded room generator	simple	function: 0x0ca82140
+loaded room generator	simple	function: 0x08b83a30
 loaded room	pilar	10	5
 alloc	pilar
-room allocated at	16	18	with center	20	20
+room allocated at	14	19	with center	18	21
 alloc	pilar
-room allocated at	14	31	with center	18	33
-room generator	function: 0x0ca82140	is making a room
-alloc	simple12x11
-room allocated at	30	35	with center	35	40
+room allocated at	16	13	with center	20	15
 alloc	pilar
-room allocated at	3	30	with center	7	32
-room generator	function: 0x0ca82140	is making a room
-alloc	simple6x7
-room allocated at	26	11	with center	28	14
+room allocated at	16	34	with center	20	36
+room generator	function: 0x08b83a30	is making a room
+alloc	simple7x11
+room allocated at	15	23	with center	18	28
+room generator	function: 0x08b83a30	is making a room
+alloc	simple6x10
+room allocated at	30	15	with center	32	19
 alloc	pilar
-room allocated at	17	12	with center	21	14
+room allocated at	14	40	with center	18	42
 alloc	pilar
-room allocated at	1	1	with center	5	3
-room generator	function: 0x0ca82140	is making a room
-alloc	simple10x6
-room allocated at	24	5	with center	28	7
-room generator	function: 0x0ca82140	is making a room
-alloc	simple5x7
-room allocated at	35	2	with center	37	5
-alloc	pilar
-room allocated at	13	39	with center	17	41
-Begin tunnel	10	table: 0x0b7814b8
-Level unconnected, no way from entrance to exit	27	27	to	33	2
-C Map size 53:26 :: 1378
-C Map seens texture: 118 (60x60)
-alloc	pilar
-room allocated at	6	12	with center	10	14
-room generator	function: 0x0ca82140	is making a room
-alloc	simple5x11
-room allocated at	43	18	with center	45	23
-alloc	pilar
-room allocated at	36	35	with center	40	37
-alloc	pilar
-room allocated at	6	1	with center	10	3
-alloc	pilar
-room allocated at	17	35	with center	21	37
-room generator	function: 0x0ca82140	is making a room
+room allocated at	16	7	with center	20	9
+room generator	function: 0x08b83a30	is making a room
+alloc	simple7x10
+room allocated at	1	38	with center	4	42
+room generator	function: 0x08b83a30	is making a room
 alloc	simple11x6
-room allocated at	3	32	with center	8	34
-room generator	function: 0x0ca82140	is making a room
-alloc	simple11x8
-room allocated at	36	9	with center	41	12
+room allocated at	36	12	with center	41	14
 alloc	pilar
-room allocated at	27	3	with center	31	5
-room generator	function: 0x0ca82140	is making a room
-alloc	simple6x11
-room allocated at	18	25	with center	20	30
-alloc	pilar
-room allocated at	14	20	with center	18	22
-Begin tunnel	10	table: 0x0b78e390
+room allocated at	25	29	with center	29	31
+Begin tunnel	10	table: 0x08a34478
 [PLAYER BIRTH] resolve...
 [PLAYER BIRTH] resolved!
 [BIRTHER] Finished!
@@ -393,471 +372,264 @@ Using cached font	/data/font/DroidSansMono.ttf	22
 Using cached font	/data/font/DroidSansMono.ttf	22
 Using cached font	/data/font/DroidSansMono.ttf	22
 Using cached font	/data/font/DroidSansMono.ttf	22
-C Map size 53:26 :: 1378
+C Map size 53:25 :: 1325
 C Map seens texture: 124 (60x60)
 [LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
 [MODULE LOADER] done loading module	Spoon the game
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
+[PROFILE THREAD] flushing CSETs
+[PROFILE THREAD] flushing CSETs ignored, empty dataset
 [QUICK HOTKEYS] Loading quick hotkey settings for module "spoon" from /save/quick_hotkeys...
 [QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 1508, 1805 ticks
+Wait finished, counted 812, 1292 ticks
 C Map minimap texture: 102 (50x50; 64x64)
-setResolution: switching resolution to	1920x1080 Fullscreen	1920	1080	true	nil	(forced)
-Setting resolution to 1920x1080 (fullscreen, with borders)
-[DO RESIZE] Requested: 1920x1080 (1, 0); zoom 100%
-[DO RESIZE] Got: 1920x1080 (1, 0)
-OpenGL max texture size: 16384
-setResolution: performing onResolutionChange...
-
-onResolutionChange: saving current resolution for potential revert.
-onResolutionChange: resolution changed to 	1920	1080	from	1920	1080
-onResolutionChange: checkResolutionChange returned false, no confirm dialog.
-[COROUTINE] registering	savefilepipe	thread: 0x07ff3a48
-[LOG]	Saving game...
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Make wait background texture 34 : 0x1084096512 (0, 1083236352)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0aaddec8	=>	table: 0x0b42a328	(128)
-Loading savefile 	/save/player/
-[SAVEFILE PIPE] unleashing save thread
-Saving zipname /save/player/game.teag.tmp
-Saved zipname /save/player/game.teag.tmp
-[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
-Loading savefile 	/save/player/
-[SAVEFILE] checked validity of type	game	 => 	all fine
-[LOG]	Saving done.
-[SAVEFILE PIPE] on end	saveGame_md5
-[SAVEFILE PIPE] saving took 0 seconds
-Wait finished, counted 381, 408 ticks
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MAIN] rebooting lua state: 	nil	nil	spoon	player	false
-[ENGINE] Setting requested FPS to 2 (500 ms)
-[ENGINE] Setting requested FPS to 30 (33 ms)
-SDL_WINDOWEVENT_MOVED: ignored due to fullscreen
-SDL_WINDOWEVENT_RESIZED: ignored due to fullscreen
-stack traceback:
-[COROUTINE] error	cannot resume dead coroutine
-[COROUTINE] dead	savefilepipe
-[ENGINE] Switching to turn based
-NO SELFEXE: bootstrapping from CWD
-===top 2
-Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine-debug.exe
-SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
-LuaVM:	LuaJIT 2.0.2	x86
-Destroying particle thread 0 (waiting for mutex)
-Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread 2802218)
-Cleaning up particle thread 0
-Cleaned up particle thread 0
-Destroyed particle thread 0 (0)
-Destroying particle thread 1 (waiting for mutex)
-Destroying particle thread 1
-Destroying particle thread 1 (waiting for thread 3acd90)
-Cleaning up particle thread 1
-Cleaned up particle thread 1
-Destroyed particle thread 1 (0)
-Destroying particle thread 2 (waiting for mutex)
-Destroying particle thread 2
-Destroying particle thread 2 (waiting for thread 281d0a8)
-Cleaning up particle thread 2
-Cleaned up particle thread 2
-Destroyed particle thread 2 (0)
-Creating particles thread 0
-Creating particles thread 1
-Creating particles thread 2
-Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-LuaVM:	LuaJIT 2.0.2	x86
-===	
-Reboot using	te4	LATEST	spoon	player	false
-LuaVM:	LuaJIT 2.0.2	x86
-[ENGINE LOADER] available from dir: 	te4-1.4.1
-[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=4.000000 , [3]=1.000000 , [4]="te4" , [5]=17.000000 , ["load_dir"]="/engines/te4-1.4.1/" , } , } __byname={["te4-1.4.1"]=true , } 
-[ENGINE LOADER] looked in:
-	C:\Users\Spencer\\T-Engine\4.0
-	bootstrap
-	C:\Users\Spencer\Documents\GitHub\Spoon\\game\thirdparty
-	C:\Users\Spencer\Documents\GitHub\Spoon\\game
-[ENGINE LOADER] sorted:	te4	1	4	1
-[ENGINE LOADER] loading engine:	1	4	1	te4
-[ENGINE LOADER] using directory engine:	/engines/te4-1.4.1/
-Available resolutions: 1920x1080x32
-Available resolutions: 1680x1050x32
-Available resolutions: 1600x1024x32
-Available resolutions: 1600x900x32
-Available resolutions: 1366x768x32
-Available resolutions: 1360x768x32
-Available resolutions: 1280x1024x32
-Available resolutions: 1280x960x32
-Available resolutions: 1280x800x32
-Available resolutions: 1280x768x32
-Available resolutions: 1280x720x32
-Available resolutions: 1152x864x32
-Available resolutions: 1024x768x32
-Available resolutions: 800x600x32
-Available resolutions: 720x576x32
-Available resolutions: 720x480x32
-Available resolutions: 640x480x32
-Available resolutions: 640x350x32
-Available resolutions: 1920x1080x16
-Available resolutions: 1680x1050x16
-Available resolutions: 1600x1024x16
-Available resolutions: 1600x900x16
-Available resolutions: 1366x768x16
-Available resolutions: 1360x768x16
-Available resolutions: 1280x1024x16
-Available resolutions: 1280x960x16
-Available resolutions: 1280x800x16
-Available resolutions: 1280x768x16
-Available resolutions: 1280x720x16
-Available resolutions: 1152x864x16
-Available resolutions: 1024x768x16
-Available resolutions: 800x600x16
-Available resolutions: 720x576x16
-Available resolutions: 720x480x16
-Available resolutions: 640x480x16
-Available resolutions: 640x350x16
-[KEYBINDER] Loaded keybinds: move
-[KEYBINDER] Loaded keybinds: hotkeys
-[KEYBINDER] Loaded keybinds: inventory
-[KEYBINDER] Loaded keybinds: actions
-[KEYBINDER] Loaded keybinds: interface
-[KEYBINDER] Loaded keybinds: debug
-Remapping	HOTKEY_7	table: 0x09e38b80
-Remapping	SHOW_MAP	table: 0x09e38c58
-Remapping	MOVE_LEFT_UP	table: 0x09e38c08
-setResolution: switching resolution to	1920x1080 Fullscreen	1920	1080	true	nil	(forced)
-Setting resolution to 1920x1080 (fullscreen, with borders)
-[DO RESIZE] Requested: 1920x1080 (1, 0); zoom 100%
-[DO RESIZE] Got: 1920x1080 (1, 0)
-OpenGL max texture size: 16384
-setResolution: performing onResolutionChange...
-
-onResolutionChange: resolution changed to 	1920	1080	from	nil	nil
-onResolutionChange: no game yet!
-[ONLINE PROFILE] fun facts	nil
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	Spoon	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for spoon-0.1.2 using engine te4-1.4.1
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Module mismatch engine version boot-1.0.0 using engine te4-1.0.0
-Loaded module definition for boot-1.0.0 using engine te4-1.0.0
-Creating module	tome-1.4.1	:: (as dir)	false	:: (as team)	nil	
-* Module: boot
- ** 1.0.0
-* Module: spoon
- ** 0.1.2
-After fs.reset
-[1] = {
-  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.4.1\
-}
-[MODULE] booting module version	spoon-0.1.2
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
- * save	/save/player/
-Make wait background texture 1 : 0x1084096512 (0, 1083236352)
-Using cached font	/data/font/Vera.ttf	12
-Using cached font	/data/font/Vera.ttf	12
-Post-processing hooks.
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE] mounted 	offline	on /current-profile
-[PROFILE] unmounted 	offline	from /current-profile
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MODULE LOADER] loading module	Spoon the game	[mod.load]	::	nil	nil
-[GAMMA] Setting gamma correction using SDL	1.2
-[MAP] Reseting tiles caches
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-[GAMMA] Setting gamma correction using SDL	1.2
-Loading savefile 	/save/player/
-[GAMMA] Setting gamma correction using SDL	1.2
-C Map size 53:26 :: 1378
-C Map seens texture: 23 (60x60)
-Loading tile	terrain/granite_wall1.png
-Loading tile	terrain/marble_floor.png
-Loading tile	terrain/granite_door1.png
-Loading entities file from file	/data/zones/dungeon/npcs.lua
-Loading entities file from file	/data/general/npcs/Virus.lua
-Loading entities file from file	/data/zones/dungeon/grids.lua
-Loading entities file from file	/data/general/grids/basic.lua
-Loading entities file from file	/data/zones/dungeon/objects.lua
-Loading entities file from file	/data/zones/dungeon/traps.lua
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSansMono.ttf	10
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSans.ttf	12
-[LOG]	Welcome to #00FF00#Spoon!
-[DISPLAY MODE] 32x32 ASCII/background
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-C Map size 53:26 :: 1378
-C Map seens texture: 54 (60x60)
-[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
-[MODULE LOADER] done loading module	Spoon the game
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[QUICK HOTKEYS] Loading quick hotkey settings for module "spoon" from /save/quick_hotkeys...
-[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 213, 786 ticks
-C Map minimap texture: 62 (50x50; 64x64)
-SDL_WINDOWEVENT_MOVED: ignored due to fullscreen
-SDL_WINDOWEVENT_RESIZED: ignored due to fullscreen
-setResolution: switching resolution to	1920x1080 Borderless	1920	1080	false	true	(forced)
-Setting resolution to 1920x1080 (windowed, borderless)
-[DO RESIZE] Requested: 1920x1080 (0, 1); zoom 100%
-[DO RESIZE] Got: 1920x1080 (0, 1)
-OpenGL max texture size: 16384
-setResolution: performing onResolutionChange...
-
-onResolutionChange: saving current resolution for potential revert.
-onResolutionChange: resolution changed to 	1920	1080	from	1920	1080
-onResolutionChange: checkResolutionChange returned false, no confirm dialog.
-[COROUTINE] registering	savefilepipe	thread: 0x0cabc468
-[LOG]	Saving game...
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-[PROFILE THREAD] batching CSETs
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-[PROFILE THREAD] batching CSETs
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-[PROFILE THREAD] batching CSETs
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-Make wait background texture 44 : 0x1084096512 (0, 1083236352)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0b372630	=>	table: 0x0b3e4750	(139)
-Loading savefile 	/save/player/
-[SAVEFILE PIPE] unleashing save thread
-Saving zipname /save/player/game.teag.tmp
-Saved zipname /save/player/game.teag.tmp
-[SAVEFILE PIPE] Checking save	player	game	/save/player/game.teag.tmp
-Loading savefile 	/save/player/
-[SAVEFILE] checked validity of type	game	 => 	all fine
-[LOG]	Saving done.
-[SAVEFILE PIPE] on end	saveGame_md5
-[SAVEFILE PIPE] saving took 1 seconds
-Wait finished, counted 402, 395 ticks
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MAIN] rebooting lua state: 	nil	nil	spoon	player	false
-move 0 x 0
-SDL_WINDOWEVENT_RESIZED: 1920 x 1054
-[DO RESIZE] Requested: 1920x1054 (0, 1); zoom 100%
-[DO RESIZE] Got: 1920x1054 (0, 1)
-OpenGL max texture size: 16384
-onResolutionChange: resolution changed to 	1920	1054	from	1920	1080
-onResolutionChange: checkResolutionChange returned false, no confirm dialog.
-[ENGINE] Setting requested FPS to 2 (500 ms)
-[ENGINE] Setting requested FPS to 30 (33 ms)
-stack traceback:
-[COROUTINE] error	cannot resume dead coroutine
-[COROUTINE] dead	savefilepipe
-[ENGINE] Switching to turn based
-NO SELFEXE: bootstrapping from CWD
-===top 2
-Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine-debug.exe
-SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
-LuaVM:	LuaJIT 2.0.2	x86
-Destroying particle thread 0 (waiting for mutex)
-Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread 3acd90)
-Cleaning up particle thread 0
-Cleaned up particle thread 0
-Destroyed particle thread 0 (0)
-Destroying particle thread 1 (waiting for mutex)
-Destroying particle thread 1
-Destroying particle thread 1 (waiting for thread 2837e98)
-Cleaning up particle thread 1
-Cleaned up particle thread 1
-Destroyed particle thread 1 (0)
-Destroying particle thread 2 (waiting for mutex)
-Destroying particle thread 2
-Destroying particle thread 2 (waiting for thread da99a28)
-Cleaning up particle thread 2
-Cleaned up particle thread 2
-Destroyed particle thread 2 (0)
-Creating particles thread 0
-Creating particles thread 1
-Creating particles thread 2
-Running lua loader code...
-LuaVM:	LuaJIT 2.0.2	x86
-LuaVM:	LuaJIT 2.0.2	x86
-===	
-Reboot using	te4	LATEST	spoon	player	false
-LuaVM:	LuaJIT 2.0.2	x86
-[ENGINE LOADER] available from dir: 	te4-1.4.1
-[ENGINE LOADER] found engines	te4={[1]={[1]=1.000000 , [2]=4.000000 , [3]=1.000000 , [4]="te4" , [5]=17.000000 , ["load_dir"]="/engines/te4-1.4.1/" , } , } __byname={["te4-1.4.1"]=true , } 
-[ENGINE LOADER] looked in:
-	C:\Users\Spencer\\T-Engine\4.0
-	bootstrap
-	C:\Users\Spencer\Documents\GitHub\Spoon\\game\thirdparty
-	C:\Users\Spencer\Documents\GitHub\Spoon\\game
-[ENGINE LOADER] sorted:	te4	1	4	1
-[ENGINE LOADER] loading engine:	1	4	1	te4
-[ENGINE LOADER] using directory engine:	/engines/te4-1.4.1/
-Available resolutions: 1920x1080x32
-Available resolutions: 1680x1050x32
-Available resolutions: 1600x1024x32
-Available resolutions: 1600x900x32
-Available resolutions: 1366x768x32
-Available resolutions: 1360x768x32
-Available resolutions: 1280x1024x32
-Available resolutions: 1280x960x32
-Available resolutions: 1280x800x32
-Available resolutions: 1280x768x32
-Available resolutions: 1280x720x32
-Available resolutions: 1152x864x32
-Available resolutions: 1024x768x32
-Available resolutions: 800x600x32
-Available resolutions: 720x576x32
-Available resolutions: 720x480x32
-Available resolutions: 640x480x32
-Available resolutions: 640x350x32
-Available resolutions: 1920x1080x16
-Available resolutions: 1680x1050x16
-Available resolutions: 1600x1024x16
-Available resolutions: 1600x900x16
-Available resolutions: 1366x768x16
-Available resolutions: 1360x768x16
-Available resolutions: 1280x1024x16
-Available resolutions: 1280x960x16
-Available resolutions: 1280x800x16
-Available resolutions: 1280x768x16
-Available resolutions: 1280x720x16
-Available resolutions: 1152x864x16
-Available resolutions: 1024x768x16
-Available resolutions: 800x600x16
-Available resolutions: 720x576x16
-Available resolutions: 720x480x16
-Available resolutions: 640x480x16
-Available resolutions: 640x350x16
-[KEYBINDER] Loaded keybinds: move
-[KEYBINDER] Loaded keybinds: hotkeys
-[KEYBINDER] Loaded keybinds: inventory
-[KEYBINDER] Loaded keybinds: actions
-[KEYBINDER] Loaded keybinds: interface
-[KEYBINDER] Loaded keybinds: debug
-Remapping	HOTKEY_7	table: 0x09e38b18
-Remapping	SHOW_MAP	table: 0x09e38bf0
-Remapping	MOVE_LEFT_UP	table: 0x09e38ba0
-setResolution: switching resolution to	1920x1054 Borderless	1920	1054	false	true	(forced)
-Setting resolution to 1920x1054 (windowed, borderless)
-[DO RESIZE] Requested: 1920x1054 (0, 1); zoom 100%
-[DO RESIZE] Got: 1920x1054 (0, 1)
-OpenGL max texture size: 16384
-setResolution: performing onResolutionChange...
-
-onResolutionChange: resolution changed to 	1920	1054	from	nil	nil
-onResolutionChange: no game yet!
-[ONLINE PROFILE] fun facts	nil
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	Spoon	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for spoon-0.1.2 using engine te4-1.4.1
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Module mismatch engine version boot-1.0.0 using engine te4-1.0.0
-Loaded module definition for boot-1.0.0 using engine te4-1.0.0
-Creating module	tome-1.4.1	:: (as dir)	false	:: (as team)	nil	
-* Module: boot
- ** 1.0.0
-* Module: spoon
- ** 0.1.2
-After fs.reset
-[1] = {
-  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.4.1\
-}
-[MODULE] booting module version	spoon-0.1.2
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
- * save	/save/player/
-Make wait background texture 1 : 0x1084096512 (0, 1083209728)
-Using cached font	/data/font/Vera.ttf	12
-Using cached font	/data/font/Vera.ttf	12
-Post-processing hooks.
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE] mounted 	offline	on /current-profile
-[PROFILE] unmounted 	offline	from /current-profile
-[PROFILE THREAD] batching CSETs
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[MODULE LOADER] loading module	Spoon the game	[mod.load]	::	nil	nil
-[GAMMA] Setting gamma correction using SDL	1.2
-[MAP] Reseting tiles caches
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-[GAMMA] Setting gamma correction using SDL	1.2
-Loading savefile 	/save/player/
-[GAMMA] Setting gamma correction using SDL	1.2
-C Map size 53:25 :: 1325
-C Map seens texture: 23 (60x60)
-Loading tile	terrain/granite_wall1.png
-Loading tile	terrain/marble_floor.png
-Loading tile	terrain/granite_door1.png
-Loading entities file from file	/data/zones/dungeon/npcs.lua
-Loading entities file from file	/data/general/npcs/Virus.lua
-Loading entities file from file	/data/zones/dungeon/grids.lua
-Loading entities file from file	/data/general/grids/basic.lua
-Loading entities file from file	/data/zones/dungeon/objects.lua
-Loading entities file from file	/data/zones/dungeon/traps.lua
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSansMono.ttf	10
-Using cached font	/data/font/DroidSans.ttf	12
-Using cached font	/data/font/DroidSans.ttf	12
-[LOG]	Welcome to #00FF00#Spoon!
-[DISPLAY MODE] 32x32 ASCII/background
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-Using cached font	/data/font/DroidSansMono.ttf	22
-C Map size 53:25 :: 1325
-C Map seens texture: 54 (60x60)
-[LOG]	#LIGHT_RED#Online profile disabled(switching to offline profile) due to no online profile active.
-[MODULE LOADER] done loading module	Spoon the game
-[PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[PROFILE THREAD] flushing CSETs
-[PROFILE THREAD] flushing CSETs ignored, empty dataset
-[QUICK HOTKEYS] Loading quick hotkey settings for module "spoon" from /save/quick_hotkeys...
-[QUICK HOTKEYS] Successfully loaded quick hotkey settings.
-Wait finished, counted 214, 793 ticks
-C Map minimap texture: 62 (50x50; 64x64)
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
 [LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
 [LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
 [LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
 [LOG]	#{bold}#Player killed virus!#{normal}#
-[LOG]	Ran for 3 turns (stop reason: didn't move).
-Server latency	128
-[ENGINE] Setting requested FPS to 2 (500 ms)
-[ENGINE] Setting requested FPS to 30 (33 ms)
-Astar fail: destination unreachable
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+Using cached font	/data/font/VeraMono.ttf	12
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Virus killed player!#{normal}#
+[LOG]	#LIGHT_BLUE#You resurrect! CHEATER !
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+Server latency	124
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Resting starts...
+[LOG]	Rested for 61 turns (stop reason: all resources and life at maximum).
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+Server latency	123
+Loading zone persistance level	dungeon	2
+Make wait background texture 4 : 0x1084096512 (0, 1083209728)
+Wait finished, counted 0, 44 ticks
+Creating level	dungeon	2
+Make wait background texture 129 : 0x1084096512 (0, 1083209728)
+C Map size 53:25 :: 1325
+C Map seens texture: 2 (60x60)
+room generator	function: 0x08b83a30	is making a room
+alloc	simple11x7
+room allocated at	20	2	with center	25	5
+room generator	function: 0x08b83a30	is making a room
+alloc	simple5x12
+room allocated at	4	23	with center	6	28
+alloc	pilar
+room allocated at	24	28	with center	28	30
+room generator	function: 0x08b83a30	is making a room
+alloc	simple10x5
+room allocated at	21	40	with center	25	42
+room generator	function: 0x08b83a30	is making a room
+alloc	simple12x11
+room allocated at	16	16	with center	21	21
+room generator	function: 0x08b83a30	is making a room
+alloc	simple10x11
+room allocated at	6	36	with center	10	41
+alloc	pilar
+room allocated at	2	14	with center	6	16
+room generator	function: 0x08b83a30	is making a room
+alloc	simple12x11
+room allocated at	35	1	with center	40	6
+alloc	pilar
+room allocated at	6	19	with center	10	21
+room generator	function: 0x08b83a30	is making a room
+alloc	simple11x11
+room allocated at	36	19	with center	41	24
+Begin tunnel	10	table: 0x0c3f9940
+Level unconnected, no way from entrance to exit	41	19	to	30	24
+C Map size 53:25 :: 1325
+C Map seens texture: 5 (60x60)
+room generator	function: 0x08b83a30	is making a room
+alloc	simple7x12
+room allocated at	12	14	with center	15	19
+alloc	pilar
+room allocated at	37	19	with center	41	21
+room generator	function: 0x08b83a30	is making a room
+alloc	simple12x6
+room allocated at	15	36	with center	20	38
+room generator	function: 0x08b83a30	is making a room
+alloc	simple6x5
+room allocated at	4	16	with center	6	18
+alloc	pilar
+room allocated at	31	25	with center	35	27
+alloc	pilar
+room allocated at	27	8	with center	31	10
+alloc	pilar
+room allocated at	1	39	with center	5	41
+room generator	function: 0x08b83a30	is making a room
+alloc	simple7x7
+room allocated at	11	3	with center	14	6
+room generator	function: 0x08b83a30	is making a room
+alloc	simple9x6
+room allocated at	13	31	with center	17	33
+room generator	function: 0x08b83a30	is making a room
+alloc	simple8x6
+room allocated at	22	17	with center	25	19
+Begin tunnel	10	table: 0x0c39f540
+Wait finished, counted 1364, 594 ticks
+C Map minimap texture: 2 (50x50; 64x64)
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+Server latency	125
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Virus hits player for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	Player hits virus for #aaaaaa#1.00 physical damage#LAST#.
+[LOG]	#{bold}#Player killed virus!#{normal}#
 Loading tile	border_7.png
 Loading tile	border_9.png
 Loading tile	border_1.png
 Loading tile	border_3.png
 Loading tile	border_8.png
 Loading tile	border_4.png
-[COROUTINE] registering	savefilepipe	thread: 0x0cb30520
+[COROUTINE] registering	savefilepipe	thread: 0x0887e860
 [ENGINE] Switching to turn based
 [SAVEFILE PIPE] force waiting
-Make wait background texture 61 : 0x1084096512 (0, 1083209728)
-[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x0b343308	=>	table: 0x09e4bc58	(83)
+Make wait background texture 7 : 0x1084096512 (0, 1083209728)
+[SAVEFILE PIPE] new save running in the pipe:	player	game	::	game.teag	::	table: 0x089f2600	=>	table: 0x0b4c5a88	(59)
 Loading savefile 	/save/player/
 [SAVEFILE PIPE] unleashing save thread
 Saving zipname /save/player/game.teag.tmp
@@ -868,7 +640,7 @@ Loading savefile 	/save/player/
 [LOG]	Saving done.
 [SAVEFILE PIPE] on end	saveGame_md5
 [SAVEFILE PIPE] saving took 1 seconds
-Wait finished, counted 351, 324 ticks
+Wait finished, counted 404, 300 ticks
 [PROFILE] mounted 	online	on /current-profile
 [PROFILE] unmounted 	online	from /current-profile
 [MAIN] rebooting lua state: 	nil	nil	nil	nil	nil
@@ -878,24 +650,24 @@ stack traceback:
 [ENGINE] Switching to turn based
 NO SELFEXE: bootstrapping from CWD
 ===top 2
-Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine-debug.exe
+Booting T-Engine from: C:\Users\Spencer\Documents\GitHub\Spoon\t-engine.exe
 SelfExe gave us app directory of:	C:\Users\Spencer\Documents\GitHub\Spoon\
 LuaVM:	LuaJIT 2.0.2	x86
 Destroying particle thread 0 (waiting for mutex)
 Destroying particle thread 0
-Destroying particle thread 0 (waiting for thread 3acd90)
+Destroying particle thread 0 (waiting for thread 39cdd8)
 Cleaning up particle thread 0
 Cleaned up particle thread 0
 Destroyed particle thread 0 (0)
 Destroying particle thread 1 (waiting for mutex)
 Destroying particle thread 1
-Destroying particle thread 1 (waiting for thread 2837e98)
+Destroying particle thread 1 (waiting for thread 23e40b8)
 Cleaning up particle thread 1
 Cleaned up particle thread 1
 Destroyed particle thread 1 (0)
 Destroying particle thread 2 (waiting for mutex)
 Destroying particle thread 2
-Destroying particle thread 2 (waiting for thread 2850dd8)
+Destroying particle thread 2 (waiting for thread 2462c18)
 Cleaning up particle thread 2
 Cleaned up particle thread 2
 Destroyed particle thread 2 (0)
@@ -960,9 +732,9 @@ Available resolutions: 640x350x16
 [KEYBINDER] Loaded keybinds: actions
 [KEYBINDER] Loaded keybinds: interface
 [KEYBINDER] Loaded keybinds: debug
-Remapping	HOTKEY_7	table: 0x05766010
-Remapping	SHOW_MAP	table: 0x05745c30
-Remapping	MOVE_LEFT_UP	table: 0x0577ada0
+Remapping	HOTKEY_7	table: 0x03d2d9b8
+Remapping	SHOW_MAP	table: 0x03d2da58
+Remapping	MOVE_LEFT_UP	table: 0x03d2da08
 setResolution: switching resolution to	1920x1054 Borderless	1920	1054	false	true	(forced)
 Setting resolution to 1920x1054 (windowed, borderless)
 [DO RESIZE] Requested: 1920x1054 (0, 1); zoom 100%
@@ -974,33 +746,4 @@ onResolutionChange: resolution changed to 	1920	1054	from	nil	nil
 onResolutionChange: no game yet!
 [ONLINE PROFILE] fun facts	nil
 [PROFILE] mounted 	online	on /current-profile
-[PROFILE] unmounted 	online	from /current-profile
-[ENGINE] Setting requested FPS to 30 (33 ms)
-[ENGINE] Switching to turn based
-[SAVEFILE PIPE] force waiting
-Creating module	Spoon	:: (as dir)	true	:: (as team)	nil	
-Loaded module definition for spoon-0.1.2 using engine te4-1.4.1
-Creating module	boot	:: (as dir)	true	:: (as team)	nil	
-Module mismatch engine version boot-1.0.0 using engine te4-1.0.0
-Loaded module definition for boot-1.0.0 using engine te4-1.0.0
-Creating module	tome-1.4.1	:: (as dir)	false	:: (as team)	nil	
-* Module: boot
- ** 1.0.0
-* Module: spoon
- ** 0.1.2
-After fs.reset
-[1] = {
-  [path] = C:\Users\Spencer\Documents\GitHub\Spoon\\game\engines\te4-1.4.1\
-}
-[MODULE] booting module version	boot-1.0.0
-[ENGINE] Switching to turn based
-Loading savefile 	/save//
-Loading savefile 	/save/player/
-Make wait background texture 2 : 0x1084096512 (0, 1083209728)
-Using cached font	/data/font/Vera.ttf	12
-Using cached font	/data/font/Vera.ttf	12
-Post-processing hooks.
-[MODULE] All hashes validation: 	nil	no online profile active
-[PROFILE THREAD] batching CSETs
-[MODULE LOADER] loading module	Spoon	[mod.load]	::	nil	nil
-[GAMMA] Not setting gamma correction yet, no fullscreen shader found	1.
+[PROFILE] unmounted 	online	from /current-pro

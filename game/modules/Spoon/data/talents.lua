@@ -17,12 +17,12 @@
 -- Nicolas Casalini "DarkGod"
 -- darkgod@te4.org
 
-newTalentType{ type="combat", name = "combat", description = "Combat techniques" }
+newTalentType{ type="fire", name = "fire", description = "Woosh" }
 
 newTalent{
 	name = "Fire Ball",
-	type = {"combat"},
-	points = 1000,
+	type = {"fire", 1},
+	points = 6,
 	cooldown = 6,
 	power = 0,
 	range = 6,
@@ -30,7 +30,26 @@ newTalent{
 		local tg = {type="ball", range=self:getTalentRange(t), radius=1, talent=t}
 		local x, y = self:getTarget(tg)
 		if not x or not y then return nil end
-		self:project(tg, x, y, DamageType.FIRE, 1, {type="fire"})
+		self:project(tg, x, y, DamageType.FIRE, self:getTalentLevel(t), {type="fire"})
+		return true
+	end,
+	info = function(self, t)
+		return "Fwoosh"
+	end,
+}
+
+newTalent{
+	name = "Blaze Ball",
+	type = {"fire", m2},
+	points = 6,
+	cooldown = 6,
+	power = 0,
+	range = 6,
+	action = function(self, t)
+		local tg = {type="ball", range=self:getTalentRange(t), radius=1, talent=t}
+		local x, y = self:getTarget(tg)
+		if not x or not y then return nil end
+		self:project(tg, x, y, DamageType.FIRE, 2, {type="fire"})
 		return true
 	end,
 	info = function(self, t)

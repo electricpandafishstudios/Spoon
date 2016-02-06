@@ -44,7 +44,7 @@ function _M:drawDialog()
 	h = h + self.font_h
    
 	s:drawStringBlended(self.font, ("Life: %d/%d"):format(player.life,player.max_life), w, h, 255, 255, 0, true) h = h + self.font_h
-	s:drawStringBlended(self.font, ("Damage: %d"):format(player.combat.dams), w, h, 255, 255, 0, true) h = h + self.font_h
+	s:drawStringBlended(self.font, ("Damage: %d"):format(player.combat.dam), w, h, 255, 255, 0, true) h = h + self.font_h
    
 	h = h + self.font_h
    

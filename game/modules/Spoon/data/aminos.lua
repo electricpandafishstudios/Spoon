@@ -15,7 +15,6 @@ newAmino{
 newAmino{
 	name = "Dam",
 	type = {"common"},
-
 	on_gain = function(self, c)
 		self.combat.dam = self.combat.dam + 1
 	end,
@@ -27,7 +26,6 @@ newAmino{
 newAmino{
 	name = "Fire ball",
 	type = {"common"},
-	sequences = {"AGU"},
 	on_gain = function(self, c)
 		self:learnTalent("T_FIRE_BALL", true, 1)
 	end,
