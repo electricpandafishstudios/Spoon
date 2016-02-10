@@ -5,6 +5,7 @@ local Textzone = require "engine.ui.Textzone"
 local Separator = require "engine.ui.Separator"
 local List = require "engine.ui.List"
 local Button = require "engine.ui.Button"
+local ModalButton = require "mod.ui.ModalButton"
 local Savefile = require "engine.Savefile"
 local Map = require "engine.Map"
 
@@ -16,135 +17,67 @@ function _M:init(actor)
 	Dialog.init(self, "Available Aminos!", 800, 500)
 
 	self:generateList()
-	self.c_1_1 = Button.new{can_focus = self:canUse(3,0,0,0), can_focus_mouse=self:canUse(3,0,0,0), text="UUU", fct=function() if self:canUse(3,0,0,0, true) then self:use("HP") self:used("UUU") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		end
-	end}
-	if self:haveUsed(self.c_1_1.text) then self.c_1_1 = Button.new{can_focus = false, can_focus_mouse=false, text="", fct=function()end, on_select=function()end} end
 	
-	self.c_1_2 = Button.new{can_focus = self:canUse(2,1,0,0), can_focus_mouse=self:canUse(2,1,0,0), text="UUC", fct=function() if self:canUse(2,1,0,0) then self:use("HP") self:used("UUC")else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		end
-	end}
-	if self:haveUsed(self.c_1_2.text) then self.c_1_1 = Button.new{can_focus = false, can_focus_mouse=false, text="", fct=function()end, on_select=function()end} end
-	
-	self.c_1_3 = Button.new{can_focus = self:canUse(2,0,1,0), can_focus_mouse=self:canUse(2,0,1,0), text="UUA", fct=function() if self:canUse(2,0,1,0) then self:use("HP") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		end
-	end}
-	self.c_1_4 = Button.new{can_focus = self:canUse(2,0,0,1), can_focus_mouse=self:canUse(2,0,0,1), text="UUG", fct=function() if self:canUse(2,0,0,1) then self:use("HP") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+	self.c_1_1 = ModalButton.new{mode=self:getMode("UUU", 3,0,0,0), text="UUU", fct=function() self:functionMode(self.c_1_1.mode, "UUU", "HP", 3,0,0,0) end, on_select=function()end}
+	self.c_1_2 = ModalButton.new{mode=self:getMode("UUC", 2,1,0,0), text="UUC", fct=function() self:functionMode(self.c_1_2.mode, "UUC", "HP", 2,1,0,0) end, on_select=function()end}
+	self.c_1_3 = ModalButton.new{mode=self:getMode("UUA", 2,0,1,0), text="UUA", fct=function() self:functionMode(self.c_1_3.mode, "UUA", "HP", 2,0,1,0) end, on_select=function()end}
+	self.c_1_4 = ModalButton.new{mode=self:getMode("UUG", 2,0,0,1), text="UUG", fct=function() self:functionMode(self.c_1_4.mode, "UUG", "HP", 2,0,0,1) end, on_select=function()end}
+	self.c_1_5 = ModalButton.new{mode=self:getMode("CUU", 2,1,0,0), text="CUU", fct=function() self:functionMode(self.c_1_5.mode, "CUU", "HP", 2,1,0,0) end, on_select=function()end}
+	self.c_1_6 = ModalButton.new{mode=self:getMode("CUC", 1,2,0,0), text="CUC", fct=function() self:functionMode(self.c_1_6.mode, "CUC", "HP", 1,2,0,0) end, on_select=function()end}
+
+	self.c_2_1 = ModalButton.new{mode=self:getMode("CUA", 1,1,1,0), text="CUA", fct=function() self:functionMode(self.c_2_1.mode, "CUA", "DAM", 1,1,1,0) end, on_select=function()end}
+	self.c_2_2 = ModalButton.new{mode=self:getMode("CUG", 1,1,0,1), text="CUG", fct=function() self:functionMode(self.c_2_2.mode, "CUG", "DAM", 1,1,0,1) end, on_select=function()end}
+	self.c_2_3 = ModalButton.new{mode=self:getMode("AUU", 2,0,1,0), text="AUU", fct=function() self:functionMode(self.c_2_3.mode, "AUU", "DAM", 2,0,1,0) end, on_select=function()end}
+	self.c_2_4 = ModalButton.new{mode=self:getMode("AUC", 1,1,1,0), text="AUC", fct=function() self:functionMode(self.c_2_4.mode, "AUC", "DAM", 1,1,1,0) end, on_select=function()end}
+	self.c_2_5 = ModalButton.new{mode=self:getMode("AUA", 1,0,2,0), text="AUA", fct=function() self:functionMode(self.c_2_5.mode, "AUA", "DAM", 1,0,2,0) end, on_select=function()end}
+	self.c_2_6 = ModalButton.new{mode=self:getMode("AUG", 1,0,1,1), text="AUG", fct=function() self:functionMode(self.c_2_6.mode, "AUG", "DAM", 1,0,1,1) end, on_select=function()end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_1_5 = Button.new{can_focus = true, can_focus_mouse=true, text="CUU", fct=function() if self:canUse(2,1,0,0) then self:use("HP") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+		-- end
+	-- end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_1_6 = Button.new{can_focus = true, can_focus_mouse=true, text="CUC", fct=function() if self:canUse(2,1,0,0) then self:use("HP") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+		-- end
+	-- end}
+
+	self.u_1_1 = ModalButton.new{mode=self:getMode("GUU", 2,0,0,1), text="GUU", fct=function() self:functionMode(self.u_1_1.mode, "GUU", "FB", 2,0,0,1) end, on_select=function()end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_2_1 = Button.new{can_focus = true, can_focus_mouse=true, text="CUA", fct=function() if self:canUse(1,1,1,0) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+		-- end
+	-- end}
+	self.u_1_2 = ModalButton.new{mode=self:getMode("GUC", 1,1,0,1), text="GUC", fct=function() self:functionMode(self.u_1_2.mode, "GUC", "FB", 1,1,0,1) end, on_select=function()end}
+	self.u_1_3 = ModalButton.new{mode=self:getMode("GUA", 1,0,1,1), text="GUA", fct=function() self:functionMode(self.u_1_3.mode, "GUA", "FB", 1,0,1,1) end, on_select=function()end}
+	self.u_1_4 = ModalButton.new{mode=self:getMode("GUG", 1,0,0,2), text="GUG", fct=function() self:functionMode(self.u_1_4.mode, "GUG", "FB", 1,0,0,2) end, on_select=function()end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_2_2 = Button.new{can_focus = true, can_focus_mouse=true, text="CUG", fct=function() if self:canUse(1,1,0,1) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+		-- end
+	-- end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_2_3 = Button.new{can_focus = true, can_focus_mouse=true, text="AUU", fct=function() if self:canUse(2,0,1,0) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
+		-- end
+	-- end}
+		-- local str = desc_types
+		-- if self.no_tooltip then
+			-- self.c_desc:erase()
+			-- self.c_desc:switchItem(str, str, true)
 		
-		end
-	end}
-	self.c_2_4 = Button.new{can_focus = true, can_focus_mouse=true, text="AUC", fct=function() if self:canUse(1,1,1,0) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.c_2_5 = Button.new{can_focus = true, can_focus_mouse=true, text="AUA", fct=function() if self:canUse(1,0,2,0) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.c_2_6 = Button.new{can_focus = true, can_focus_mouse=true, text="AUG", fct=function() if self:canUse(1,0,1,1) then self:use("DAM") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.u_1_1 = Button.new{can_focus = true, can_focus_mouse=true, text="GUU", fct=function() if self:canUse(2,0,0,1) then self:use("FB") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.u_1_2 = Button.new{can_focus = true, can_focus_mouse=true, text="GUC", fct=function() if self:canUse(1,1,0,1) then self:use("FB") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.u_1_3 = Button.new{can_focus = true, can_focus_mouse=true, text="GUA", fct=function() if self:canUse(1,0,1,1) then self:use("FB") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
-	self.u_1_4 = Button.new{can_focus = true, can_focus_mouse=true, text="GUG", fct=function() if self:canUse(1,0,0,2) then self:use("FB") else self:cantUse() end end, on_select=function()
-		local str = desc_types
-		if self.no_tooltip then
-			self.c_desc:erase()
-			self.c_desc:switchItem(str, str, true)
-		
-		end
-	end}
+		-- end
+	-- end}
 	
 	local b_height = 25
 	local b_width = 50
@@ -206,16 +139,35 @@ function _M:canUse(U,C,A,G, dec)
 	return true
 end
 
-function _M:cantUse()
-	game:unregisterDialog(self)
+function _M:decrement(U,C,A,G)
+	self.actor:incStat(game.player.STAT_U, -U)
+	self.actor:incStat(game.player.STAT_C, -C)
+	self.actor:incStat(game.player.STAT_A, -A)
+	self.actor:incStat(game.player.STAT_G, -G)
 end
 
-function _M:used(codon)
-	self.actor.codons[codon] = 1
+function _M:getMode(codon, U, C, A, G)
+	if self.actor.codons[codon] then
+		return "USED"
+	elseif self:canUse(U,C,A,G) then
+		return "AVAIL"
+	else
+		return "UNAVAIL"
+	end
 end
 
-function _M:haveUsed(codon)
-	if self.actor.codons[codon] then return true else return false end
+function _M:functionMode(mode, codon, item,U,C,A,G)
+	if not mode then return end
+	local fct = mode
+	if fct == "AVAIL" then
+		self:use(item)
+		self.actor.codons[codon] = 1
+		self:decrement(U,C,A,G)
+	elseif fct == "USED" then
+		game:unregisterDialog(self)
+	elseif fct == "UNAVAIL" then
+		game:unregisterDialog(self)
+	end
 end
 
 function _M:use(item)
