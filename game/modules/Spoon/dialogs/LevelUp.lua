@@ -82,9 +82,9 @@ function _M:init(actor)
 	local b_height = 25
 	local b_width = 50
 	
-	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[HP]], has_box=true}
-	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=[[DAM]], has_box=true}
-	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=[[FB]], has_box=true}
+	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Health: Increases your max Life by 1.]], has_box=true}
+	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Damage: Increases your damage by 1.]], has_box=true}
+	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=[[Fireball: Ranged attack of radius 2. Deals 1 damage per Codon purchased.]], has_box=true}
 	
 	local align_c_1 = Empty.new{width=b_width,height=-12}
 	local align_c_2 = Empty.new{width=b_width,height=90-12}
