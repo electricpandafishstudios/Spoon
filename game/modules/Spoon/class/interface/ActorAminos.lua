@@ -87,7 +87,22 @@ function _M:gainAmino(a_id)
 		--end
 	end
 end
---- Initialises stats with default values if needed
+
+--- Do we have this Amino
+function _M:hasAmino(id)
+	if type(id) == "table" then id = id.id end
+	return (self:getAminoLevelRaw(id) > 0) and true or false
+end
+
+--- Amino level, 0 if not known
+function _M:getAminoLevelRaw(id)
+	if type(id) == "table" then id = id.id end
+	local level = 0
+	for i, amino in ipairs(self.aminos) do
+		if amino == id then level = level + 1 end
+	end
+	return level or 0
+end
 
 --- Return the full description of an Amino
 -- You may overload it to add more data (like power usage, ...)
@@ -101,6 +116,13 @@ function _M:getAminoDisplayName(a)
 	if type(a.display_name) == "function" then return a.display_name(self, a) end
 	return a.display_name
 end
+
+--- Return Amino definition from id
+function _M:getAminoFromId(id)
+	if type(id) == "table" then return id end
+	return _M.aminos_def[id]
+end
+
 function _M:init(a)
 	self.aminos = a.aminos or {}
 	self.aminos_types = a.aminos_types or {}

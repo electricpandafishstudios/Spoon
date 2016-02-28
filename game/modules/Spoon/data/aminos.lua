@@ -2,7 +2,8 @@ newAminoType{ type = "common", name = "common", description = "do things"}
 --newAminoType{ type = "uncommon", name = "uncommon", description = "do things"}
 
 newAmino{
-	name = "HP",
+	name = "Health",
+	short_name = "HP",
 	type = {"common"},
 	on_gain = function(self, c)
 		self.max_life = self.max_life + 1
@@ -14,7 +15,8 @@ newAmino{
 }
 
 newAmino{
-	name = "Dam",
+	name = "Damage",
+	short_name = "DAM",
 	type = {"common"},
 	on_gain = function(self, c)
 		self.combat.dam = self.combat.dam + 1
@@ -26,6 +28,7 @@ newAmino{
 
 newAmino{
 	name = "Fire Ball",
+	short_name= "fire",
 	type = {"common"},
 	on_gain = function(self, c)
 		self:learnTalent("T_FIRE_BALL", true, 1)

@@ -19,37 +19,37 @@ function _M:init(actor)
 	self:generateList()
 	
 	-- Common Slots
-	self.c_1_1 = self:makeButton("UUU", 3, 0, 0, 0, "HP")
-	self.c_1_2 = self:makeButton("UUC", 2, 1, 0, 0, "HP")
-	self.c_1_3 = self:makeButton("UUA", 2, 0, 1, 0, "HP")
-	self.c_1_4 = self:makeButton("UUG", 2, 0, 0, 1, "HP")
-	self.c_1_5 = self:makeButton("CUU", 2, 0, 1, 0, "HP")
-	self.c_1_6 = self:makeButton("CUC", 1, 2, 0, 0, "HP")
+	self.c_1_1 = self:makeButton("UUU", 3, 0, 0, 0, "A_HP")
+	self.c_1_2 = self:makeButton("UUC", 2, 1, 0, 0, "A_HP")
+	self.c_1_3 = self:makeButton("UUA", 2, 0, 1, 0, "A_HP")
+	self.c_1_4 = self:makeButton("UUG", 2, 0, 0, 1, "A_HP")
+	self.c_1_5 = self:makeButton("CUU", 2, 0, 1, 0, "A_HP")
+	self.c_1_6 = self:makeButton("CUC", 1, 2, 0, 0, "A_HP")
 	
-	self.c_2_1 = self:makeButton("CUA", 1, 1, 1, 0, "DAM")
-	self.c_2_2 = self:makeButton("CUG", 1, 1, 0, 1, "DAM")
-	self.c_2_3 = self:makeButton("AUU", 2, 0, 1, 0, "DAM")
-	self.c_2_4 = self:makeButton("AUC", 1, 1, 1, 0, "DAM")
-	self.c_2_5 = self:makeButton("AUA", 1, 0, 2, 0, "DAM")
-	self.c_2_6 = self:makeButton("AUG", 1, 0, 1, 1, "DAM")
+	self.c_2_1 = self:makeButton("CUA", 1, 1, 1, 0, "A_DAM")
+	self.c_2_2 = self:makeButton("CUG", 1, 1, 0, 1, "A_DAM")
+	self.c_2_3 = self:makeButton("AUU", 2, 0, 1, 0, "A_DAM")
+	self.c_2_4 = self:makeButton("AUC", 1, 1, 1, 0, "A_DAM")
+	self.c_2_5 = self:makeButton("AUA", 1, 0, 2, 0, "A_DAM")
+	self.c_2_6 = self:makeButton("AUG", 1, 0, 1, 1, "A_DAM")
 	
 
 	--Uncommon Slots
-	self.u_1_1 = self:makeButton("GUU", 2, 0, 0, 1, "FB")
-	self.u_1_2 = self:makeButton("GUC", 1, 1, 0, 1, "FB")
-	self.u_1_3 = self:makeButton("GUA", 1, 0, 1, 1, "FB")
-	self.u_1_4 = self:makeButton("GUG", 1, 0, 0, 2, "FB")
+	self.u_1_1 = self:makeButton("GUU", 2, 0, 0, 1, "A_FIRE")
+	self.u_1_2 = self:makeButton("GUC", 1, 1, 0, 1, "A_FIRE")
+	self.u_1_3 = self:makeButton("GUA", 1, 0, 1, 1, "A_FIRE")
+	self.u_1_4 = self:makeButton("GUG", 1, 0, 0, 2, "A_FIRE")
 	
 	
 	local b_height = 25
 	local b_width = 50
 	
-	--self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Health: Increases your max Life by 1.]], has_box=true}
 	local aminos = game.player.aminos_def
-	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_HP), ActorAminos:getAminoFullDescription(aminos.A_HP)), has_box=true}
-
-	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_DAM), ActorAminos:getAminoFullDescription(aminos.A_DAM)), has_box=true}
-	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_FIRE_BALL), ActorAminos:getAminoFullDescription(aminos.A_FIRE_BALL)), has_box=true}
+	
+	self.a_1 = self:makeText(90, (6*b_height)-18, "A_HP")
+	self.a_2 = self:makeText(90, (6*b_height)-18, "A_DAM")
+	self.a_3 = self:makeText(90, (4*b_height)-12, "A_FIRE")
+	
 	
 	local align_c_1 = Empty.new{width=b_width,height=-12}
 	local align_c_2 = Empty.new{width=b_width,height=90-12}
@@ -109,7 +109,7 @@ function _M:getMode(codon, U, C, A, G)
 end
 
 function _M:canUse(U, C, A, G)
-	if self.actor:getU() < U or self.actor.getC() < C or self.actor.getA() < A or self.actor.getG() < G then return false end
+	if self.actor:getU() < U or self.actor:getC() < C or self.actor:getA() < A or self.actor:getG() < G then return false end
 	return true
 end
 
@@ -120,17 +120,20 @@ function _M:decrement(U,C,A,G)
 	self.actor:incStat(game.player.STAT_G, -G)
 end
 
+function _M:makeText(w, h, id)
+	local amino = ActorAminos:getAminoFromId(id)
+	
+	if self.actor:hasAmino(id) then
+		return Textzone.new{width=w, height=h, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(amino), ActorAminos:getAminoFullDescription(amino)), has_box=true}
+	else
+		return Textzone.new{width=w, height=h, text=[[??? Purchase a codon to unlock this Amino ???]], has_box=true}
+	end
+end
+
 function _M:use(item)
 	if not item then return end
 	local act = item
-
-	if act == "HP" then
-		self.actor:gainAmino("A_HP")
-	elseif act == "DAM" then
-		self.actor:gainAmino("A_DAM")
-	elseif act == "FB" then
-		self.actor:gainAmino("A_FIRE_BALL")
-	end
+	self.actor:gainAmino(act)
 	self.actor:levelup()
 	game:unregisterDialog(self)
 end
