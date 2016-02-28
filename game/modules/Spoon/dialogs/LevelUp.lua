@@ -89,9 +89,13 @@ function _M:init(actor)
 	self:setupUI(false, true)
 end
 
-function _M:makeButton(btext, U, C, A, G, act)
-	local bMode = self:getMode(btext, U, C, A, G)
-	return ModalButton.new{mode=bMode, text=btext, fct=function() self:functionMode(bMode, btext, U, C, A, G, act) end, on_select=function()end}
+function _M:makeButton(bText, U, C, A, G, act)
+	local bMode = self:getMode(bText, U, C, A, G)
+	if bMode == "USED" or bMode == "UNAVAIL" then
+		return ModalButton.new{mode=bMode, text=bText, fct=function() game:unregisterDialog(self) end, on_select=function()end}
+	else
+		return ModalButton.new{mode=bMode, text=bText, fct=function() self:use(act) self.actor.codons[bText] = 1 self:decrement(U,C,A,G) end, on_select=function()end}
+	end
 end
 
 function _M:getMode(codon, U, C, A, G)
@@ -104,33 +108,8 @@ function _M:getMode(codon, U, C, A, G)
 	end
 end
 
-function _M:functionMode(mode, codon, U, C, A, G, item)
-	if not mode then return end
-	local fct = mode
-	if fct == "AVAIL" then
-		self:use(item)
-		self.actor.codons[codon] = 1
-		self:decrement(U,C,A,G)
-	elseif fct == "USED" then
-		game:unregisterDialog(self)
-	elseif fct == "UNAVAIL" then
-		game:unregisterDialog(self)
-	end
-end
-
-
-function _M:canUse(U,C,A,G, dec)
-	
-	if self.actor:getU() < U then return false end
-	if self.actor:getC() < C then return false end
-	if self.actor:getA() < A then return false end
-	if self.actor:getG() < G then return false end
-	if dec then
-		self.actor:incStat(game.player.STAT_U, -U)
-		self.actor:incStat(game.player.STAT_C, -C)
-		self.actor:incStat(game.player.STAT_A, -A)
-		self.actor:incStat(game.player.STAT_G, -G)
-	end
+function _M:canUse(U, C, A, G)
+	if self.actor:getU() < U or self.actor.getC() < C or self.actor.getA() < A or self.actor.getG() < G then return false end
 	return true
 end
 
