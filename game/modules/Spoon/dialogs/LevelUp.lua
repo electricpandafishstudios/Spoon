@@ -4,8 +4,8 @@ local Empty = require "engine.ui.Empty"
 local Textzone = require "engine.ui.Textzone"
 local Separator = require "engine.ui.Separator"
 local List = require "engine.ui.List"
-local Button = require "engine.ui.Button"
 local ModalButton = require "mod.ui.ModalButton"
+--local Aminos = require "mod.data.aminos"
 local Savefile = require "engine.Savefile"
 local Map = require "engine.Map"
 
@@ -18,71 +18,36 @@ function _M:init(actor)
 
 	self:generateList()
 	
-	self.c_1_1 = ModalButton.new{mode=self:getMode("UUU", 3,0,0,0), text="UUU", fct=function() self:functionMode(self.c_1_1.mode, "UUU", "HP", 3,0,0,0) end, on_select=function()end}
-	self.c_1_2 = ModalButton.new{mode=self:getMode("UUC", 2,1,0,0), text="UUC", fct=function() self:functionMode(self.c_1_2.mode, "UUC", "HP", 2,1,0,0) end, on_select=function()end}
-	self.c_1_3 = ModalButton.new{mode=self:getMode("UUA", 2,0,1,0), text="UUA", fct=function() self:functionMode(self.c_1_3.mode, "UUA", "HP", 2,0,1,0) end, on_select=function()end}
-	self.c_1_4 = ModalButton.new{mode=self:getMode("UUG", 2,0,0,1), text="UUG", fct=function() self:functionMode(self.c_1_4.mode, "UUG", "HP", 2,0,0,1) end, on_select=function()end}
-	self.c_1_5 = ModalButton.new{mode=self:getMode("CUU", 2,1,0,0), text="CUU", fct=function() self:functionMode(self.c_1_5.mode, "CUU", "HP", 2,1,0,0) end, on_select=function()end}
-	self.c_1_6 = ModalButton.new{mode=self:getMode("CUC", 1,2,0,0), text="CUC", fct=function() self:functionMode(self.c_1_6.mode, "CUC", "HP", 1,2,0,0) end, on_select=function()end}
+	-- Common Slots
+	self.c_1_1 = self:makeButton("UUU", 3, 0, 0, 0, "HP")
+	self.c_1_2 = self:makeButton("UUC", 2, 1, 0, 0, "HP")
+	self.c_1_3 = self:makeButton("UUA", 2, 0, 1, 0, "HP")
+	self.c_1_4 = self:makeButton("UUG", 2, 0, 0, 1, "HP")
+	self.c_1_5 = self:makeButton("CUU", 2, 0, 1, 0, "HP")
+	self.c_1_6 = self:makeButton("CUC", 1, 2, 0, 0, "HP")
+	
+	self.c_2_1 = self:makeButton("CUA", 1, 1, 1, 0, "DAM")
+	self.c_2_2 = self:makeButton("CUG", 1, 1, 0, 1, "DAM")
+	self.c_2_3 = self:makeButton("AUU", 2, 0, 1, 0, "DAM")
+	self.c_2_4 = self:makeButton("AUC", 1, 1, 1, 0, "DAM")
+	self.c_2_5 = self:makeButton("AUA", 1, 0, 2, 0, "DAM")
+	self.c_2_6 = self:makeButton("AUG", 1, 0, 1, 1, "DAM")
+	
 
-	self.c_2_1 = ModalButton.new{mode=self:getMode("CUA", 1,1,1,0), text="CUA", fct=function() self:functionMode(self.c_2_1.mode, "CUA", "DAM", 1,1,1,0) end, on_select=function()end}
-	self.c_2_2 = ModalButton.new{mode=self:getMode("CUG", 1,1,0,1), text="CUG", fct=function() self:functionMode(self.c_2_2.mode, "CUG", "DAM", 1,1,0,1) end, on_select=function()end}
-	self.c_2_3 = ModalButton.new{mode=self:getMode("AUU", 2,0,1,0), text="AUU", fct=function() self:functionMode(self.c_2_3.mode, "AUU", "DAM", 2,0,1,0) end, on_select=function()end}
-	self.c_2_4 = ModalButton.new{mode=self:getMode("AUC", 1,1,1,0), text="AUC", fct=function() self:functionMode(self.c_2_4.mode, "AUC", "DAM", 1,1,1,0) end, on_select=function()end}
-	self.c_2_5 = ModalButton.new{mode=self:getMode("AUA", 1,0,2,0), text="AUA", fct=function() self:functionMode(self.c_2_5.mode, "AUA", "DAM", 1,0,2,0) end, on_select=function()end}
-	self.c_2_6 = ModalButton.new{mode=self:getMode("AUG", 1,0,1,1), text="AUG", fct=function() self:functionMode(self.c_2_6.mode, "AUG", "DAM", 1,0,1,1) end, on_select=function()end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
-
-	self.u_1_1 = ModalButton.new{mode=self:getMode("GUU", 2,0,0,1), text="GUU", fct=function() self:functionMode(self.u_1_1.mode, "GUU", "FB", 2,0,0,1) end, on_select=function()end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
-	self.u_1_2 = ModalButton.new{mode=self:getMode("GUC", 1,1,0,1), text="GUC", fct=function() self:functionMode(self.u_1_2.mode, "GUC", "FB", 1,1,0,1) end, on_select=function()end}
-	self.u_1_3 = ModalButton.new{mode=self:getMode("GUA", 1,0,1,1), text="GUA", fct=function() self:functionMode(self.u_1_3.mode, "GUA", "FB", 1,0,1,1) end, on_select=function()end}
-	self.u_1_4 = ModalButton.new{mode=self:getMode("GUG", 1,0,0,2), text="GUG", fct=function() self:functionMode(self.u_1_4.mode, "GUG", "FB", 1,0,0,2) end, on_select=function()end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
-		-- local str = desc_types
-		-- if self.no_tooltip then
-			-- self.c_desc:erase()
-			-- self.c_desc:switchItem(str, str, true)
-		
-		-- end
-	-- end}
+	--Uncommon Slots
+	self.u_1_1 = self:makeButton("GUU", 2, 0, 0, 1, "FB")
+	self.u_1_2 = self:makeButton("GUC", 1, 1, 0, 1, "FB")
+	self.u_1_3 = self:makeButton("GUA", 1, 0, 1, 1, "FB")
+	self.u_1_4 = self:makeButton("GUG", 1, 0, 0, 2, "FB")
+	
 	
 	local b_height = 25
 	local b_width = 50
 	
 	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Health: Increases your max Life by 1.]], has_box=true}
+	
+	--self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=, has_box=true}
+
 	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Damage: Increases your damage by 1.]], has_box=true}
 	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=[[Fireball: Ranged attack of radius 2. Deals 1 damage per Codon purchased.]], has_box=true}
 	
@@ -124,6 +89,36 @@ function _M:init(actor)
 	self:setupUI(false, true)
 end
 
+function _M:makeButton(btext, U, C, A, G, act)
+	local bMode = self:getMode(btext, U, C, A, G)
+	return ModalButton.new{mode=bMode, text=btext, fct=function() self:functionMode(bMode, btext, U, C, A, G, act) end, on_select=function()end}
+end
+
+function _M:getMode(codon, U, C, A, G)
+	if self.actor.codons[codon] then
+		return "USED"
+	elseif self:canUse(U,C,A,G) then
+		return "AVAIL"
+	else
+		return "UNAVAIL"
+	end
+end
+
+function _M:functionMode(mode, codon, U, C, A, G, item)
+	if not mode then return end
+	local fct = mode
+	if fct == "AVAIL" then
+		self:use(item)
+		self.actor.codons[codon] = 1
+		self:decrement(U,C,A,G)
+	elseif fct == "USED" then
+		game:unregisterDialog(self)
+	elseif fct == "UNAVAIL" then
+		game:unregisterDialog(self)
+	end
+end
+
+
 function _M:canUse(U,C,A,G, dec)
 	
 	if self.actor:getU() < U then return false end
@@ -144,30 +139,6 @@ function _M:decrement(U,C,A,G)
 	self.actor:incStat(game.player.STAT_C, -C)
 	self.actor:incStat(game.player.STAT_A, -A)
 	self.actor:incStat(game.player.STAT_G, -G)
-end
-
-function _M:getMode(codon, U, C, A, G)
-	if self.actor.codons[codon] then
-		return "USED"
-	elseif self:canUse(U,C,A,G) then
-		return "AVAIL"
-	else
-		return "UNAVAIL"
-	end
-end
-
-function _M:functionMode(mode, codon, item,U,C,A,G)
-	if not mode then return end
-	local fct = mode
-	if fct == "AVAIL" then
-		self:use(item)
-		self.actor.codons[codon] = 1
-		self:decrement(U,C,A,G)
-	elseif fct == "USED" then
-		game:unregisterDialog(self)
-	elseif fct == "UNAVAIL" then
-		game:unregisterDialog(self)
-	end
 end
 
 function _M:use(item)
