@@ -94,7 +94,7 @@ function _M:makeButton(bText, U, C, A, G, act)
 	if bMode == "USED" or bMode == "UNAVAIL" then
 		return ModalButton.new{mode=bMode, text=bText, fct=function() game:unregisterDialog(self) end, on_select=function()end}
 	else
-		return ModalButton.new{mode=bMode, text=bText, fct=function() self:use(act) self.actor.codons[bText] = 1 self:decrement(U,C,A,G) end, on_select=function()end}
+		return ModalButton.new{mode=bMode, text=bText, fct=function() self:use(act) self.actor.codons[bText] = 1 self:decrement(U, C, A, G) end, on_select=function()end}
 	end
 end
 
