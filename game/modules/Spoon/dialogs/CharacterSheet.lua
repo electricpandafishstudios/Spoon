@@ -49,10 +49,25 @@ function _M:drawDialog()
 	h = h + self.font_h
    
 	s:drawStringBlended(self.font, "Aminos: ", w, h, 0, 255, 255, true) h = h + self.font_h
-	for i, v in ipairs(player.aminos) do
-		s:drawStringBlended(self.font, i..": "..v, w, h, 0, 255, 255, true) h = h + self.font_h
+	-- for i, v in ipairs(player.aminos) do
+		-- s:drawStringBlended(self.font, i..": "..v, w, h, 0, 255, 255, true) h = h + self.font_h
+	-- end
+	
+	h = h + self.font_h
+	
+	s:drawStringBlended(self.font, "Commons: ", w, h, 0, 255, 255, true) h = h + self.font_h
+	for i, v in ipairs(player.aminos_types_def.common.aminos) do
+		s:drawStringBlended(self.font, i..": "..v.name, w, h, 0, 255, 255, true) h = h + self.font_h
 	end
 
+	h = h + self.font_h
+	
+	s:drawStringBlended(self.font, "Uncommons: ", w, h, 0, 255, 255, true) h = h + self.font_h
+	for i, v in ipairs(player.aminos_types_def.uncommon.aminos) do
+		s:drawStringBlended(self.font, i..": "..v.name, w, h, 0, 255, 255, true) h = h + self.font_h
+	end
+	
+	
 	self.c_desc:generate()
 	self.changed = false
 end
