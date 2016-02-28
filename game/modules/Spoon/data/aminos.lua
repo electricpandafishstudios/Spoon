@@ -1,5 +1,5 @@
 newAminoType{ type = "common", name = "common", description = "do things"}
---newAminoType{ type = "uncommon", name = "uncommon", description = "do things"}
+newAminoType{ type = "uncommon", name = "uncommon", description = "do things"}
 
 newAmino{
 	name = "Health",
@@ -29,7 +29,7 @@ newAmino{
 newAmino{
 	name = "Fire Ball",
 	short_name= "fire",
-	type = {"common"},
+	type = {"uncommon"},
 	on_gain = function(self, c)
 		self:learnTalent("T_FIRE_BALL", true, 1)
 	end,
