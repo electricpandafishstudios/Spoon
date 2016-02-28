@@ -1,4 +1,5 @@
 newAminoType{ type = "common", name = "common", description = "do things"}
+--newAminoType{ type = "uncommon", name = "uncommon", description = "do things"}
 
 newAmino{
 	name = "HP",
@@ -8,7 +9,7 @@ newAmino{
 		self.life = self.life + 1
 	end,
 	info = function(self, c)
-		return "Ups HP."
+		return "Increases your max Life by 1."
 	end,
 }
 
@@ -19,17 +20,17 @@ newAmino{
 		self.combat.dam = self.combat.dam + 1
 	end,
 	info = function(self, c)
-		return "Ups damage."
+		return "Increases your damage by 1."
 	end,
 }
 
 newAmino{
-	name = "Fire ball",
+	name = "Fire Ball",
 	type = {"common"},
 	on_gain = function(self, c)
 		self:learnTalent("T_FIRE_BALL", true, 1)
 	end,
 	info = function(self, c)
-		return "FIRE."
+		return "Ranged attack of radius 2. Deals 1 damage per Codon purchased."
 	end,
 }

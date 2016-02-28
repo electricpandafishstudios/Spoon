@@ -5,7 +5,7 @@ local Textzone = require "engine.ui.Textzone"
 local Separator = require "engine.ui.Separator"
 local List = require "engine.ui.List"
 local ModalButton = require "mod.ui.ModalButton"
---local Aminos = require "mod.data.aminos"
+local ActorAminos = require "mod.class.interface.ActorAminos"
 local Savefile = require "engine.Savefile"
 local Map = require "engine.Map"
 
@@ -44,12 +44,12 @@ function _M:init(actor)
 	local b_height = 25
 	local b_width = 50
 	
-	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Health: Increases your max Life by 1.]], has_box=true}
-	
-	--self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=, has_box=true}
+	--self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Health: Increases your max Life by 1.]], has_box=true}
+	local aminos = game.player.aminos_def
+	self.a_1 = Textzone.new{width=90, height=(6*b_height)-18, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_HP), ActorAminos:getAminoFullDescription(aminos.A_HP)), has_box=true}
 
-	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=[[Damage: Increases your damage by 1.]], has_box=true}
-	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=[[Fireball: Ranged attack of radius 2. Deals 1 damage per Codon purchased.]], has_box=true}
+	self.a_2 = Textzone.new{width=90, height=(6*b_height)-18, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_DAM), ActorAminos:getAminoFullDescription(aminos.A_DAM)), has_box=true}
+	self.a_3 = Textzone.new{width=90, height=(4*b_height)-12, text=([[%s: %s]]):format(ActorAminos:getAminoDisplayName(aminos.A_FIRE_BALL), ActorAminos:getAminoFullDescription(aminos.A_FIRE_BALL)), has_box=true}
 	
 	local align_c_1 = Empty.new{width=b_width,height=-12}
 	local align_c_2 = Empty.new{width=b_width,height=90-12}
