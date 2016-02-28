@@ -101,7 +101,7 @@ end
 function _M:getMode(codon, U, C, A, G)
 	if self.actor.codons[codon] then
 		return "USED"
-	elseif self:canUse(U,C,A,G) then
+	elseif self:canUse(U, C, A, G) then
 		return "AVAIL"
 	else
 		return "UNAVAIL"
@@ -113,7 +113,7 @@ function _M:canUse(U, C, A, G)
 	return true
 end
 
-function _M:decrement(U,C,A,G)
+function _M:decrement(U, C, A, G)
 	self.actor:incStat(game.player.STAT_U, -U)
 	self.actor:incStat(game.player.STAT_C, -C)
 	self.actor:incStat(game.player.STAT_A, -A)
